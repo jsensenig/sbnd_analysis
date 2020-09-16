@@ -228,120 +228,6 @@ protected:
     std::map<std::string,TH1D*> KaonN_Hist;
     std::map<std::string,TH1D*> HadronE_Hist;
     std::map<std::string,TH1D*> PhotonCon_Hist;
-    
-
-    std::map<std::string,std::map<int,TH1D*> > TrueNumber_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > TrueEnergyAll_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > TrueEnergy_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > CCQEEnergy_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AVCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVBefore_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_EnergyCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonEnergyCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MuLenghtCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NCCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LeptonPlusPhotonCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > Weights_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PiZero_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_Photon_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonSmall_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > LowNCEnergy_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > ProtonE_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > PionE_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > KaonE_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > ProtonN_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > PionN_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > KaonN_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > HadronE_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > PhotonCon_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergyAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AVCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVBeforeAfter_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_EnergyCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonEnergyCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MuLenghtCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NCCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LeptonPlusPhotonCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PiZeroAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonSmallAfter_HistMode;
-    
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_NoShowerCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoPhotonCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoShowerCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_PhotonFVCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoLeptonsAfter_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_NoShowerCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoPhotonCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoShowerCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_PhotonFVCut_HistMode;
-     std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoLeptons_HistMode;
-
-
-
-    std::map<std::string,std::map<int,TH1D*> > TrueNumber_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > TrueEnergyAll_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > TrueEnergy_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > CCQEEnergy_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AVCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVBefore_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_EnergyCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonEnergyCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MuLenghtCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NCCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LeptonPlusPhotonCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > Weights_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PiZero_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_Photon_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonSmall_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > LowNCEnergy_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > ProtonE_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > PionE_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > KaonE_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > ProtonN_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > PionN_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > KaonN_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > HadronE_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > PhotonCon_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergyAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AVCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVBeforeAfter_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_EnergyCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_PhotonEnergyCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MuLenghtCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NCCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LeptonPlusPhotonCutAfter_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_NoShowerCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoPhotonCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoShowerCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_PhotonFVCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoLeptonsAfter_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_NoShowerCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoPhotonCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoShowerCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_PhotonFVCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergy_TwoLeptons_HistIntType;
-
-
 
     std::map<std::string,TH1D* >VisibleEnergyLep_Hist;
     std::map<std::string,TH1D* >VisibleEnergyLep_AVCut_Hist;
@@ -382,96 +268,6 @@ protected:
     std::map<std::string,TH1D* >VisibleEnergyLep_PhotonFVCutAfter_Hist;
     std::map<std::string,TH1D* >VisibleEnergyLep_TwoLeptonsAfter_Hist;
 
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_AVCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVBefore_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_EnergyCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonEnergyCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_ConversionGapCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_MuLenghtCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NCCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_LeptonPlusPhotonCut_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_Selection_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PiZero_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_Photon_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonSmall_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLepAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_AVCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVBeforeAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_EnergyCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonEnergyCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_ConversionGapCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_MuLenghtCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NCCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_SelectionAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PiZeroAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonAfter_HistMode;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonSmallAfter_HistMode;
-    
-
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NoShowerCutAfter_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoPhotonCutAfter_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoShowerCutAfter_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonFVCutAfter_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoLeptonsAfter_HistMode;
-
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NoShowerCut_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoPhotonCut_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoShowerCut_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonFVCut_HistMode;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoLeptons_HistMode;
-
-
-
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_AVCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVBefore_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_EnergyCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonEnergyCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_ConversionGapCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_MuLenghtCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NCCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_LeptonPlusPhotonCut_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_Selection_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PiZero_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_Photon_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonSmall_HistIntType;
-    
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLepAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_AVCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_FVBeforeAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_EnergyCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonEnergyCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_ConversionGapCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_MuLenghtCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NCCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_SelectionAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PiZeroAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonSmallAfter_HistIntType;
-	      
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NoShowerCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoPhotonCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoShowerCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonFVCutAfter_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoLeptonsAfter_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_NoShowerCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoPhotonCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoShowerCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_PhotonFVCut_HistIntType;
-   std::map<std::string,std::map<int,TH1D*> >VisibleEnergyLep_TwoLeptons_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_SelectionAfter_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_SelectionAfter_HistMode;
-
     TH1D* VisibleEnergy_CosmicAVCut_Hist;
     TH1D* VisibleEnergy_CosmicFVCut_Hist;
     TH1D* VisibleEnergy_CosmicClyinderCut_Hist;
@@ -502,9 +298,6 @@ protected:
     TH2D* EndMCPYZCosmic = new TH2D("EndMCPYZCosmic","EndMCPYZCosmic",100,-400,400,100,-100,600);
     TH2D* EndMCPXYCosmic = new TH2D("EndMCPXYCosmic","EndMCPXYCosmic",100,-400,400,400,-400,200);
 
-    
-
-
     TH2D* XZPhot = new TH2D("XZPhot","XZPhot",100,-200,200,100,0,500);
     TH2D* YZPhot = new TH2D("YZPhot","YZPhot",100,-200,200,100,0,500);
     TH2D* XYPhot = new TH2D("XYPhot","XYPhot",100,-200,200,100,-200,200);
@@ -519,8 +312,7 @@ protected:
     //Final selection histograms
     TH1D* VisibleEnergy_CosmicSelection_Hist;
     std::map<std::string,TH1D*> VisibleEnergy_Selection_Hist;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_Selection_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_Selection_HistIntType;
+
     std::vector<std::string> HistTypes = {"NuMu","InNuE","OscNuE","NCInNuE","NCOscNuE","NCNuMu","DirtNuMu","DirtInNuE","DirtOscNuE","DirtNCInNuE","DirtNCOscNuE","DirtNCNuMu","AllBackground","AllSignal","AllDirt"};
   };
 
@@ -568,8 +360,8 @@ protected:
   double GENIEWeight(const simb::MCNeutrino& nu);
 
   void InitialiseHistograms();
-  void FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu, NueSelection::NueInteraction& intInfo, bool& booldirtevent);
-  void FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu, NueSelection::NueInteraction& intInfo,double Energy, bool &booldirtevent);
+  void FillHistograms(std::map<std::string,TH1D*>& HistMap, const simb::MCNeutrino& nu, NueSelection::NueInteraction& intInfo, bool& booldirtevent);
+  void FillHistograms(std::map<std::string,TH1D*>& HistMap, const simb::MCNeutrino& nu, NueSelection::NueInteraction& intInfo,double Energy, bool &booldirtevent);
 
   void PrintInformation(const simb::MCTruth& mctruth, NueSelection::NueInteraction& intInfo);
 

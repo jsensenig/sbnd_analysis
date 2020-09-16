@@ -253,105 +253,11 @@ protected:
     std::map<std::string,TH1D*> VisibleEnergy_NumneutrinosRemoved_Hist;
     std::map<std::string,TH1D*> VisibleEnergy_NumneutrinosPassed_Hist;
 
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MCTruth_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> > TrueNumber_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_BeforeSel_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AfterSel_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AfterSelOne_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AfterSelExtra_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_GtrOneShowerRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_GtrOneShowerPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerECutRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerECutPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerResidualRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerResidualPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_dEdxRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_dEdxPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LengthRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LengthPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OpeningAngleRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OpeningAnglePassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerEnergyRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerEnergyPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityGradientRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityGradientPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityPowerRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityPowerPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackLengthRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackLengthPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackWidthRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackWidthPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackPIDARemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackPIDAPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthPIDARemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthPIDAPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MVARemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MVAPassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NeutrinoPdgCodeRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NeutrinoPdgCodePassed_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NumneutrinosRemoved_HistMode;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NumneutrinosPassed_HistMode;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MCTruth_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > TrueNumber_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_BeforeSel_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AfterSel_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AfterSelOne_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_AfterSelExtra_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_FVPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_GtrOneShowerRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_GtrOneShowerPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerECutRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerECutPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerResidualRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OneShowerResidualPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ConversionGapPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_dEdxRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_dEdxPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LengthRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_LengthPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OpeningAngleRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_OpeningAnglePassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerEnergyRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerEnergyPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityGradientRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityGradientPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityPowerRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerDensityPowerPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackLengthRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackLengthPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackWidthRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_ShowerTrackWidthPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackPIDARemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackPIDAPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthPIDARemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MaxTrackLengthPIDAPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MVARemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_MVAPassed_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NeutrinoPdgCodeRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NeutrinoPdgCodePassed_HistIntType;
-
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NumneutrinosRemoved_HistIntType;
-    std::map<std::string,std::map<int,TH1D*> > VisibleEnergy_NumneutrinosPassed_HistIntType;
-
     TH1D* XDiff;
     TH1D* YDiff; 
     TH1D* ZDiff;
-    std::vector<std::string> HistTypes = {"NuMu","InNuE","OscNuE","NCInNuE","NCOscNuE","NCNuMu","DirtNuMu","DirtInNuE","DirtOscNuE","DirtNCInNuE","DirtNCOscNuE","DirtNCNuMu","AllSignal","AllBackground"};
+    std::vector<std::string> HistTypes = {"NuMu","InNuE","OscNuE","NCInNuE","NCOscNuE","NCNuMu","DirtNuMu","DirtInNuE",
+                                          "DirtOscNuE","DirtNCInNuE","DirtNCOscNuE","DirtNCNuMu","AllSignal","AllBackground"};
   };
 
   Config fConfig; //!< The config
@@ -472,8 +378,9 @@ protected:
   void SetupMVA();
      
   void InitialiseHistograms();
-  void FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType,NueSelectionReco::NueInteraction& intInfo);
-  void FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu, NueSelectionReco::NueInteraction& intInfo,double Energy, bool &booldirtevent);
+  void FillHistograms(std::map<std::string,TH1D*>& HistMap, NueSelectionReco::NueInteraction& intInfo);
+  void FillHistograms(std::map<std::string,TH1D*>& HistMap, const simb::MCNeutrino& nu,
+                      NueSelectionReco::NueInteraction& intInfo, double Energy, bool &booldirtevent);
 
 
   void GetSliceHits(const art::Ptr<recob::PFParticle>& pfp, 

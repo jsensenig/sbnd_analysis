@@ -266,106 +266,7 @@ namespace ana {
 	  fRootHists.HadronE_Hist[fRootHists.HistTypes[i]]->Write();
 	  fRootHists.PhotonCon_Hist[fRootHists.HistTypes[i]]->Write();
 
-	  if(fConfig.FillModeHistograms){
-	    for(int mode=-1; mode<6; ++mode){
-	      fOutputFile->cd("ModeHistograms");
-	      fRootHists.TrueNumber_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.TrueEnergy_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.TrueEnergyAll_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.CCQEEnergy_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_AVCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_FVCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_FVBefore_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_EnergyCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_PhotonEnergyCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MuLenghtCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_NCCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
- 	      fRootHists.VisibleEnergy_Selection_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_PiZero_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_Photon_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_PhotonSmall_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.LowNCEnergy_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      
-	      fRootHists.Weights_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      
-	      fRootHists.ProtonE_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.PionE_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.KaonE_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.ProtonN_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.PionN_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.KaonN_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.HadronE_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.PhotonCon_HistMode[fRootHists.HistTypes[i]][mode]->Write();
 
-	      fRootHists.VisibleEnergyAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_AVCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_FVCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_FVBeforeAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_EnergyCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_PhotonEnergyCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MuLenghtCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_NCCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-
-	    }
-	  }
-
-	  if(fConfig.FillIntTypeHistograms){
-	    for(int inttype=1000; inttype<1101; ++inttype){
-	      fOutputFile->cd("InteractionTypeHistograms");
-
-	      if(fRootHists.TrueNumber_HistIntType[fRootHists.HistTypes[i]][inttype]->GetEntries() == 0){continue;} 
-
-	      fRootHists.TrueNumber_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.TrueEnergy_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.TrueEnergyAll_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.CCQEEnergy_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_AVCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_FVCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_FVBefore_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_EnergyCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_PhotonEnergyCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MuLenghtCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_NCCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_Selection_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_PiZero_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_Photon_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_PhotonSmall_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.LowNCEnergy_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-	      fRootHists.Weights_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      
-	      fRootHists.ProtonE_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.PionE_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.KaonE_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.ProtonN_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.PionN_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.KaonN_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.HadronE_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.PhotonCon_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-	      fRootHists.VisibleEnergyAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_AVCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_FVCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_FVBeforeAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_EnergyCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_PhotonEnergyCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MuLenghtCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_NCCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      
-
-	    }
-	  }
 	}
 
 	if(fConfig.FillHistograms){
@@ -436,9 +337,6 @@ namespace ana {
 		fRootHists.VisibleEnergyLep_NCCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
 		fRootHists.VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
 		fRootHists.VisibleEnergyLep_SelectionAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-
-
 
 	      }
 	    }
@@ -1714,18 +1612,16 @@ namespace ana {
     }
   
     //Fill the histograms.... can't think of a better comment.
-    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode,
-                                      std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu,
+    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, const simb::MCNeutrino& nu,
                                       NueSelection::NueInteraction& intInfo, bool& booldirtevent){
       
       double Energy = intInfo.GetNueEnergy();
       
-      FillHistograms(HistMap,HistMapMode,HistMapIntType,nu,intInfo,Energy,booldirtevent);
+      FillHistograms(HistMap, nu, intInfo, Energy, booldirtevent);
 
     }
 
-    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode,
-                                      std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu,
+    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, const simb::MCNeutrino& nu,
                                       NueSelection::NueInteraction& intInfo, double Energy, bool& booldirtevent){
       
       if(!fConfig.FillHistograms){return;}
@@ -1749,8 +1645,6 @@ namespace ana {
 	  //Check to see if we are Numu background
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["DirtNuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtNuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -1758,15 +1652,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["DirtInNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtInNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtInNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["DirtOscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtOscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)    HistMapMode["DirtOscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -1774,8 +1664,6 @@ namespace ana {
 	  //Neutral current histogtam fill
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["DirtNCNuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNCNuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtNCNuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -1783,15 +1671,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["DirtNCInNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNCInNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtNCInNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["DirtNCOscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNCOscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)     HistMapMode["DirtNCOscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -1802,8 +1686,6 @@ namespace ana {
 	  //Check to see if we are Numu background
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["NuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["NuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["NuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -1811,15 +1693,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["InNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["InNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["InNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["OscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["OscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)     HistMapMode["OscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -1827,8 +1705,6 @@ namespace ana {
 	  //Neutral current histogtam fill
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["NCNuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["NCNuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["NCNuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -1836,15 +1712,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["NCInNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["NCInNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["NCInNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["NCOscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["NCOscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)     HistMapMode["NCOscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -2101,383 +1973,6 @@ namespace ana {
 	  fRootHists.HadronE_Hist[Type] = new TH1D(HadronE_Name,HadronE_Name,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
 	  fRootHists.PhotonCon_Hist[Type] = new TH1D(PhotonCon_Name,PhotonCon_Name,100,0,40);
 
-
-
-	  if(fConfig.FillModeHistograms){
-
-	    for(int mode=-1; mode<6; ++mode){
-	    
-	      std::string  TrueNumber_StringMode                     = TrueNumber_String + " " +  std::to_string(mode);
-	      std::string  TrueEnergy_StringMode                     = TrueEnergy_String + " " +  std::to_string(mode);
-	      std::string  TrueEnergyAll_StringMode                  = TrueEnergyAll_String + " " +  std::to_string(mode);  
-	      std::string  CCQEEnergy_StringMode                     = CCQEEnergy_String + " " +  std::to_string(mode);                    
-	      std::string  VisibleEnergy_StringMode                  = VisibleEnergy_String + " " +  std::to_string(mode);                  
-	      std::string  VisibleEnergy_AVCut_StringMode            = VisibleEnergy_AVCut_String + " " +  std::to_string(mode);           
-	      std::string  VisibleEnergy_FVCut_StringMode            = VisibleEnergy_FVCut_String + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergy_FVBefore_StringMode            = VisibleEnergy_FVBefore_String + " " +  std::to_string(mode);            
-
-	      std::string  VisibleEnergy_EnergyCut_StringMode        = VisibleEnergy_EnergyCut_String + " " +  std::to_string(mode);        
-	      std::string  VisibleEnergy_PhotonEnergyCut_StringMode  = VisibleEnergy_PhotonEnergyCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_ConversionGapCut_StringMode = VisibleEnergy_ConversionGapCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_MuLenghtCut_StringMode      = VisibleEnergy_MuLenghtCut_String + " " +  std::to_string(mode);      
-	      std::string  VisibleEnergy_NCCut_StringMode            = VisibleEnergy_NCCut_String + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergy_Selection_StringMode        = VisibleEnergy_Selection_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_PiZero_StringMode           = VisibleEnergy_PiZero_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_Photon_StringMode           = VisibleEnergy_Photon_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_PhotonSmall_StringMode           = VisibleEnergy_PhotonSmall_String + " " +  std::to_string(mode);
-	      std::string  LowNCEnergy_StringMode                     = LowNCEnergy_String + " " +  std::to_string(mode);
-
-	      std::string  VisibleEnergy_NoShowerCut_StringMode      = VisibleEnergy_NoShowerCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_TwoPhotonCut_StringMode     = VisibleEnergy_TwoPhotonCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_TwoShowerCut_StringMode     = VisibleEnergy_TwoShowerCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_PhotonFVCut_StringMode      = VisibleEnergy_PhotonFVCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_TwoLeptons_StringMode      = VisibleEnergy_PhotonFVCut_String + " " +  std::to_string(mode);
-	  
-
-	      std::string  VisibleEnergy_LeptonPlusPhotonCut_StringMode = VisibleEnergy_LeptonPlusPhotonCut_String + " " +  std::to_string(mode);
-	      std::string  Weights_StringMode                           = Weights_String  + " " +  std::to_string(mode);
-	      std::string  ProtonE_StringMode                     = ProtonE_String + " " +  std::to_string(mode);
-	      std::string  PionE_StringMode                       = PionE_String + " " +  std::to_string(mode);
-	      std::string  KaonE_StringMode                       = KaonE_String + " " +  std::to_string(mode);
-	      std::string  ProtonN_StringMode                     = ProtonN_String + " " +  std::to_string(mode);
-	      std::string  PionN_StringMode                       = PionN_String + " " +  std::to_string(mode);
-	      std::string  KaonN_StringMode                       = KaonN_String + " " +  std::to_string(mode);
-	      std::string  HadronE_StringMode                       = HadronE_String + " " +  std::to_string(mode);
-	      std::string  PhotonCon_StringMode                       = PhotonCon_String + " " +  std::to_string(mode);
-
-
-	      std::string  VisibleEnergy_StringAfterMode                  = VisibleEnergy_StringAfter + " " +  std::to_string(mode);                  
-	      std::string  VisibleEnergy_AVCut_StringAfterMode            = VisibleEnergy_AVCut_StringAfter + " " +  std::to_string(mode);           
-	      std::string  VisibleEnergy_FVCut_StringAfterMode            = VisibleEnergy_FVCut_StringAfter + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergy_FVBefore_StringAfterMode            = VisibleEnergy_FVBefore_StringAfter + " " +  std::to_string(mode);            
-
-	      std::string  VisibleEnergy_EnergyCut_StringAfterMode        = VisibleEnergy_EnergyCut_StringAfter + " " +  std::to_string(mode);        
-	      std::string  VisibleEnergy_PhotonEnergyCut_StringAfterMode  = VisibleEnergy_PhotonEnergyCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_ConversionGapCut_StringAfterMode = VisibleEnergy_ConversionGapCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_MuLenghtCut_StringAfterMode      = VisibleEnergy_MuLenghtCut_StringAfter + " " +  std::to_string(mode);      
-	      std::string  VisibleEnergy_NCCut_StringAfterMode            = VisibleEnergy_NCCut_StringAfter + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergy_Selection_StringAfterMode        = VisibleEnergy_Selection_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_NoShowerCut_StringAfterMode      = VisibleEnergy_NoShowerCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_TwoPhotonCut_StringAfterMode     = VisibleEnergy_TwoPhotonCut_StringAfter + " " +  std::to_string(mode);
-	      std::string   VisibleEnergy_TwoShowerCut_StringAfterMode     = VisibleEnergy_TwoShowerCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_PhotonFVCut_StringAfterMode      = VisibleEnergy_PhotonFVCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergy_TwoLeptons_StringAfterMode      = VisibleEnergy_PhotonFVCut_StringAfter + " " +  std::to_string(mode);
-
-	      std::string  VisibleEnergy_LeptonPlusPhotonCut_StringAfterMode = VisibleEnergy_LeptonPlusPhotonCut_StringAfter + " " +  std::to_string(mode);
-
-
-	      const char* TrueNumber_NameMode                     = TrueNumber_StringMode.c_str();
-	      const char* TrueEnergy_NameMode                     = TrueEnergy_StringMode.c_str();
-	      const char* TrueEnergyAll_NameMode                  = TrueEnergyAll_StringMode.c_str();
-	      const char* CCQEEnergy_NameMode                     = CCQEEnergy_StringMode.c_str();
-	      const char* VisibleEnergy_NameMode                  = VisibleEnergy_StringMode.c_str();
-	      const char* VisibleEnergy_AVCut_NameMode            = VisibleEnergy_AVCut_StringMode.c_str();
-	      const char* VisibleEnergy_FVCut_NameMode            = VisibleEnergy_FVCut_StringMode.c_str();
-	      const char* VisibleEnergy_FVBefore_NameMode            = VisibleEnergy_FVBefore_StringMode.c_str();
-
-	      const char* VisibleEnergy_EnergyCut_NameMode        = VisibleEnergy_EnergyCut_StringMode.c_str();
-	      const char* VisibleEnergy_PhotonEnergyCut_NameMode  = VisibleEnergy_PhotonEnergyCut_StringMode.c_str();
-	      const char* VisibleEnergy_ConversionGapCut_NameMode = VisibleEnergy_ConversionGapCut_StringMode.c_str();
-	      const char* VisibleEnergy_MuLenghtCut_NameMode      = VisibleEnergy_MuLenghtCut_StringMode.c_str();
-	      const char* VisibleEnergy_NCCut_NameMode            = VisibleEnergy_NCCut_StringMode.c_str();
-	      const char* VisibleEnergy_Selection_NameMode        = VisibleEnergy_Selection_StringMode.c_str();
-	      const char* VisibleEnergy_PiZero_NameMode           = VisibleEnergy_PiZero_StringMode.c_str();
-	      const char* VisibleEnergy_Photon_NameMode           = VisibleEnergy_Photon_StringMode.c_str();
-	      const char* VisibleEnergy_PhotonSmall_NameMode           = VisibleEnergy_PhotonSmall_StringMode.c_str();
-	      const char* LowNCEnergy_NameMode                     = LowNCEnergy_StringMode.c_str();
-
-	      const char*  VisibleEnergy_NoShowerCut_NameMode      = VisibleEnergy_NoShowerCut_StringMode.c_str();
-	      const char*  VisibleEnergy_TwoPhotonCut_NameMode     = VisibleEnergy_TwoPhotonCut_StringMode.c_str();
-	      const char*  VisibleEnergy_TwoShowerCut_NameMode     = VisibleEnergy_TwoShowerCut_StringMode.c_str();
-	      const char*  VisibleEnergy_PhotonFVCut_NameMode      = VisibleEnergy_TwoShowerCut_StringMode.c_str();
-	      const char*  VisibleEnergy_TwoLeptons_NameMode      = VisibleEnergy_TwoLeptons_StringMode.c_str();
-
-
-	      const char* VisibleEnergy_LeptonPlusPhotonCut_NameMode = VisibleEnergy_LeptonPlusPhotonCut_StringMode.c_str();
-	      const char* Weights_NameMode                           = Weights_StringMode.c_str();
-	      const char* ProtonE_NameMode                     = ProtonE_StringMode.c_str();
-	      const char* PionE_NameMode                       = PionE_StringMode.c_str();
-	      const char* KaonE_NameMode                       = KaonE_StringMode.c_str();
-	      const char* ProtonN_NameMode                     = ProtonN_StringMode.c_str();
-	      const char* PionN_NameMode                       = PionN_StringMode.c_str();
-	      const char* KaonN_NameMode                       = KaonN_StringMode.c_str();
-	      const char* HadronE_NameMode                       = HadronE_StringMode.c_str();
-	      const char* PhotonCon_NameMode                       = PhotonCon_StringMode.c_str();
-
-
-	      const char* VisibleEnergy_NameAfterMode                  = VisibleEnergy_StringAfterMode.c_str();
-	      const char* VisibleEnergy_AVCut_NameAfterMode            = VisibleEnergy_AVCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_FVCut_NameAfterMode            = VisibleEnergy_FVCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_FVBefore_NameAfterMode            = VisibleEnergy_FVBefore_StringAfterMode.c_str();
-
-	      const char* VisibleEnergy_EnergyCut_NameAfterMode        = VisibleEnergy_EnergyCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_PhotonEnergyCut_NameAfterMode  = VisibleEnergy_PhotonEnergyCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_ConversionGapCut_NameAfterMode = VisibleEnergy_ConversionGapCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_MuLenghtCut_NameAfterMode      = VisibleEnergy_MuLenghtCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_NCCut_NameAfterMode            = VisibleEnergy_NCCut_StringAfterMode.c_str();
-	      const char* VisibleEnergy_Selection_NameAfterMode        = VisibleEnergy_Selection_StringAfterMode.c_str();
-	      const char* VisibleEnergy_LeptonPlusPhotonCut_NameAfterMode = VisibleEnergy_LeptonPlusPhotonCut_StringAfterMode.c_str();
-
-	      const char*  VisibleEnergy_NoShowerCut_NameAfterMode      = VisibleEnergy_NoShowerCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergy_TwoPhotonCut_NameAfterMode     = VisibleEnergy_TwoPhotonCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergy_TwoShowerCut_NameAfterMode     = VisibleEnergy_TwoShowerCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergy_PhotonFVCut_NameAfterMode      = VisibleEnergy_TwoShowerCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergy_TwoLeptons_NameAfterMode      = VisibleEnergy_TwoLeptons_StringAfterMode.c_str();
-
-
-	      
-	      fRootHists.TrueNumber_HistMode[Type][mode] = new TH1D(TrueNumber_NameMode,TrueNumber_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.TrueEnergy_HistMode[Type][mode] = new TH1D(TrueEnergy_NameMode,TrueEnergy_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.TrueEnergyAll_HistMode[Type][mode] = new TH1D(TrueEnergyAll_NameMode,TrueEnergyAll_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.CCQEEnergy_HistMode[Type][mode] = new TH1D(CCQEEnergy_NameMode,CCQEEnergy_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_HistMode[Type][mode] = new TH1D(VisibleEnergy_NameMode,VisibleEnergy_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_AVCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_AVCut_NameMode,VisibleEnergy_AVCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_FVCut_NameMode,VisibleEnergy_FVCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVBefore_HistMode[Type][mode] = new TH1D(VisibleEnergy_FVBefore_NameMode,VisibleEnergy_FVBefore_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergy_EnergyCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_EnergyCut_NameMode,VisibleEnergy_EnergyCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonEnergyCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_PhotonEnergyCut_NameMode,VisibleEnergy_PhotonEnergyCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_ConversionGapCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_ConversionGapCut_NameMode,VisibleEnergy_ConversionGapCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_MuLenghtCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_MuLenghtCut_NameMode,VisibleEnergy_MuLenghtCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_NCCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_NCCut_NameMode,VisibleEnergy_NCCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_Selection_HistMode[Type][mode] = new TH1D(VisibleEnergy_Selection_NameMode,VisibleEnergy_Selection_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PiZero_HistMode[Type][mode] = new TH1D(VisibleEnergy_PiZero_NameMode,VisibleEnergy_PiZero_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_Photon_HistMode[Type][mode] = new TH1D(VisibleEnergy_Photon_NameMode,VisibleEnergy_Photon_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonSmall_HistMode[Type][mode] = new TH1D(VisibleEnergy_PhotonSmall_NameMode,VisibleEnergy_PhotonSmall_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	    
-	      fRootHists.Weights_HistMode[Type][mode]  = new TH1D(Weights_NameMode,Weights_NameMode,100,0,2); 
-	 
-	      fRootHists.VisibleEnergy_NoShowerCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_NoShowerCut_NameMode,VisibleEnergy_NoShowerCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoPhotonCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_TwoPhotonCut_NameMode,VisibleEnergy_TwoPhotonCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoShowerCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_TwoShowerCut_NameMode,VisibleEnergy_TwoShowerCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonFVCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_PhotonFVCut_NameMode,VisibleEnergy_PhotonFVCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoLeptons_HistMode[Type][mode] = new TH1D(VisibleEnergy_TwoLeptons_NameMode,VisibleEnergy_TwoLeptons_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      
- 
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCut_HistMode[Type][mode] = new TH1D(VisibleEnergy_LeptonPlusPhotonCut_NameMode,VisibleEnergy_LeptonPlusPhotonCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.LowNCEnergy_HistMode[Type][mode] = new TH1D(LowNCEnergy_NameMode,LowNCEnergy_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.ProtonE_HistMode[Type][mode] = new TH1D(ProtonE_NameMode,ProtonE_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.PionE_HistMode[Type][mode] = new TH1D(PionE_NameMode,PionE_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.KaonE_HistMode[Type][mode] = new TH1D(KaonE_NameMode,KaonE_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.HadronE_HistMode[Type][mode] = new TH1D(HadronE_NameMode,HadronE_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.PhotonCon_HistMode[Type][mode] = new TH1D(PhotonCon_NameMode,PhotonCon_NameMode,100,0,40);
-
-	      fRootHists.ProtonN_HistMode[Type][mode] = new TH1D(ProtonN_NameMode,ProtonN_NameMode,20,0,20);
-	      fRootHists.PionN_HistMode[Type][mode] = new TH1D(PionN_NameMode,PionN_NameMode,20,0,20);
-	      fRootHists.KaonN_HistMode[Type][mode] = new TH1D(KaonN_NameMode,KaonN_NameMode,20,0,20);
-
-	       fRootHists.VisibleEnergyAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_NameAfterMode,VisibleEnergy_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_AVCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_AVCut_NameAfterMode,VisibleEnergy_AVCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_FVCut_NameAfterMode,VisibleEnergy_FVCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVBeforeAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_FVBefore_NameAfterMode,VisibleEnergy_FVBefore_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergy_EnergyCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_EnergyCut_NameAfterMode,VisibleEnergy_EnergyCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonEnergyCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_PhotonEnergyCut_NameAfterMode,VisibleEnergy_PhotonEnergyCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_ConversionGapCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_ConversionGapCut_NameAfterMode,VisibleEnergy_ConversionGapCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_MuLenghtCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_MuLenghtCut_NameAfterMode,VisibleEnergy_MuLenghtCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_NCCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_NCCut_NameAfterMode,VisibleEnergy_NCCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_SelectionAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_Selection_NameAfterMode,VisibleEnergy_Selection_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_LeptonPlusPhotonCut_NameAfterMode,VisibleEnergy_LeptonPlusPhotonCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      fRootHists.VisibleEnergy_NoShowerCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_NoShowerCut_NameAfterMode,VisibleEnergy_NoShowerCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoPhotonCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_TwoPhotonCut_NameAfterMode,VisibleEnergy_TwoPhotonCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoShowerCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_TwoShowerCut_NameAfterMode,VisibleEnergy_TwoShowerCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonFVCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_PhotonFVCut_NameAfterMode,VisibleEnergy_PhotonFVCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoLeptonsAfter_HistMode[Type][mode] = new TH1D(VisibleEnergy_TwoLeptons_NameAfterMode,VisibleEnergy_TwoLeptons_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-
-	    }
-	  }
-
-	  if(fConfig.FillIntTypeHistograms){
-	    for(int inttype=1000; inttype<1101; ++inttype){
-
-	      std::string  TrueNumber_StringIntType                     = TrueNumber_String + " " +  std::to_string(inttype);
-	      std::string  TrueEnergy_StringIntType                     = TrueEnergy_String + " " +  std::to_string(inttype);
-	      std::string  TrueEnergyAll_StringIntType                  = TrueEnergyAll_String + " " +  std::to_string(inttype);  
-	      std::string  CCQEEnergy_StringIntType                     = CCQEEnergy_String + " " +  std::to_string(inttype);                    
-	      std::string  VisibleEnergy_StringIntType                  = VisibleEnergy_String + " " +  std::to_string(inttype);                  
-	      std::string  VisibleEnergy_AVCut_StringIntType            = VisibleEnergy_AVCut_String + " " +  std::to_string(inttype);           
-	      std::string  VisibleEnergy_FVCut_StringIntType            = VisibleEnergy_FVCut_String + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergy_FVBefore_StringIntType            = VisibleEnergy_FVBefore_String + " " +  std::to_string(inttype);            
-
-	      std::string  VisibleEnergy_EnergyCut_StringIntType        = VisibleEnergy_EnergyCut_String + " " +  std::to_string(inttype);        
-	      std::string  VisibleEnergy_PhotonEnergyCut_StringIntType  = VisibleEnergy_PhotonEnergyCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_ConversionGapCut_StringIntType = VisibleEnergy_ConversionGapCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_MuLenghtCut_StringIntType      = VisibleEnergy_MuLenghtCut_String + " " +  std::to_string(inttype);      
-	      std::string  VisibleEnergy_NCCut_StringIntType            = VisibleEnergy_NCCut_String + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergy_Selection_StringIntType        = VisibleEnergy_Selection_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_PiZero_StringIntType           = VisibleEnergy_PiZero_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_Photon_StringIntType           = VisibleEnergy_Photon_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_PhotonSmall_StringIntType           = VisibleEnergy_PhotonSmall_String + " " +  std::to_string(inttype);
-	      std::string  LowNCEnergy_StringIntType                     = LowNCEnergy_String + " " +  std::to_string(inttype);
-
-	      std::string  VisibleEnergy_LeptonPlusPhotonCut_StringIntType = VisibleEnergy_LeptonPlusPhotonCut_String + " " +  std::to_string(inttype);
-	      std::string  Weights_StringIntType                           = Weights_String  + " " +  std::to_string(inttype);
-	      std::string  ProtonE_StringIntType                     = ProtonE_String + " " +  std::to_string(inttype);
-	      std::string  PionE_StringIntType                       = PionE_String   + " " +  std::to_string(inttype);
-	      std::string  KaonE_StringIntType                       = KaonE_String   + " " +  std::to_string(inttype);
-	      std::string  ProtonN_StringIntType                     = ProtonN_String + " " +  std::to_string(inttype);
-	      std::string  PionN_StringIntType                       = PionN_String   + " " +  std::to_string(inttype);
-	      std::string  KaonN_StringIntType                       = KaonN_String   + " " +  std::to_string(inttype);
-	      std::string  HadronE_StringIntType                       = HadronE_String   + " " +  std::to_string(inttype);
-	      std::string  PhotonCon_StringIntType                       = PhotonCon_String   + " " +  std::to_string(inttype);
-	      
-	      std::string  VisibleEnergy_NoShowerCut_StringIntType      = VisibleEnergy_NoShowerCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_TwoPhotonCut_StringIntType     = VisibleEnergy_TwoPhotonCut_String + " " +  std::to_string(inttype);
-	      std::string   VisibleEnergy_TwoShowerCut_StringIntType     = VisibleEnergy_TwoShowerCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_PhotonFVCut_StringIntType      = VisibleEnergy_PhotonFVCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_TwoLeptons_StringIntType      = VisibleEnergy_PhotonFVCut_String + " " +  std::to_string(inttype);
-
-
-
-	      const char* TrueNumber_NameIntType                     = TrueNumber_StringIntType.c_str();
-	      const char* TrueEnergy_NameIntType                     = TrueEnergy_StringIntType.c_str();
-	      const char* TrueEnergyAll_NameIntType                  = TrueEnergyAll_StringIntType.c_str();
-	      const char* CCQEEnergy_NameIntType                     = CCQEEnergy_StringIntType.c_str();
-	      const char* VisibleEnergy_NameIntType                  = VisibleEnergy_StringIntType.c_str();
-	      const char* VisibleEnergy_AVCut_NameIntType            = VisibleEnergy_AVCut_StringIntType.c_str();
-	      const char* VisibleEnergy_FVCut_NameIntType            = VisibleEnergy_FVCut_StringIntType.c_str();
-	      const char* VisibleEnergy_FVBefore_NameIntType            = VisibleEnergy_FVBefore_StringIntType.c_str();
-
-	      const char* VisibleEnergy_EnergyCut_NameIntType        = VisibleEnergy_EnergyCut_StringIntType.c_str();
-	      const char* VisibleEnergy_PhotonEnergyCut_NameIntType  = VisibleEnergy_PhotonEnergyCut_StringIntType.c_str();
-	      const char* VisibleEnergy_ConversionGapCut_NameIntType = VisibleEnergy_ConversionGapCut_StringIntType.c_str();
-	      const char* VisibleEnergy_MuLenghtCut_NameIntType      = VisibleEnergy_MuLenghtCut_StringIntType.c_str();
-	      const char* VisibleEnergy_NCCut_NameIntType            = VisibleEnergy_NCCut_StringIntType.c_str();
-	      const char* VisibleEnergy_Selection_NameIntType        = VisibleEnergy_Selection_StringIntType.c_str();
-	      const char* VisibleEnergy_PiZero_NameIntType           = VisibleEnergy_PiZero_StringIntType.c_str();
-	      const char* VisibleEnergy_Photon_NameIntType           = VisibleEnergy_Photon_StringIntType.c_str();
-	      const char* VisibleEnergy_PhotonSmall_NameIntType           = VisibleEnergy_PhotonSmall_StringIntType.c_str();
-	      const char* LowNCEnergy_NameIntType                     = LowNCEnergy_StringIntType.c_str();
-
-	      const char* VisibleEnergy_LeptonPlusPhotonCut_NameIntType = VisibleEnergy_LeptonPlusPhotonCut_StringIntType.c_str();
-	      const char* Weights_NameIntType                           = Weights_StringIntType.c_str();
-	      const char* ProtonE_NameIntType                     = ProtonE_StringIntType.c_str();
-	      const char* PionE_NameIntType                       = PionE_StringIntType.c_str();
-	      const char* KaonE_NameIntType                       = KaonE_StringIntType.c_str();
-	      const char* ProtonN_NameIntType                     = ProtonN_StringIntType.c_str();
-	      const char* PionN_NameIntType                       = PionN_StringIntType.c_str();
-	      const char* KaonN_NameIntType                       = KaonN_StringIntType.c_str();
-	      const char* HadronE_NameIntType                       = HadronE_StringIntType.c_str();
-	      const char* PhotonCon_NameIntType                       = PhotonCon_StringIntType.c_str();
-
-	      const char*  VisibleEnergy_NoShowerCut_NameIntType      = VisibleEnergy_NoShowerCut_StringIntType.c_str();
-	      const char*  VisibleEnergy_TwoPhotonCut_NameIntType     = VisibleEnergy_TwoPhotonCut_StringIntType.c_str();
-	      const char*  VisibleEnergy_TwoShowerCut_NameIntType     = VisibleEnergy_TwoShowerCut_StringIntType.c_str();
-	      const char*  VisibleEnergy_PhotonFVCut_NameIntType      = VisibleEnergy_TwoShowerCut_StringIntType.c_str();
-	      const char*  VisibleEnergy_TwoLeptons_NameIntType      = VisibleEnergy_TwoLeptons_StringIntType.c_str();
-
-
-	      fRootHists.TrueNumber_HistIntType[Type][inttype] = new TH1D(TrueNumber_NameIntType,TrueNumber_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.TrueEnergy_HistIntType[Type][inttype] = new TH1D(TrueEnergy_NameIntType,TrueEnergy_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.TrueEnergyAll_HistIntType[Type][inttype] = new TH1D(TrueEnergyAll_NameIntType,TrueEnergyAll_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.CCQEEnergy_HistIntType[Type][inttype] = new TH1D(CCQEEnergy_NameIntType,CCQEEnergy_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NameIntType,VisibleEnergy_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_AVCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_AVCut_NameIntType,VisibleEnergy_AVCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_FVCut_NameIntType,VisibleEnergy_FVCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVBefore_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_FVBefore_NameIntType,VisibleEnergy_FVBefore_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergy_EnergyCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_EnergyCut_NameIntType,VisibleEnergy_EnergyCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonEnergyCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_PhotonEnergyCut_NameIntType,VisibleEnergy_PhotonEnergyCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_ConversionGapCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ConversionGapCut_NameIntType,VisibleEnergy_ConversionGapCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_MuLenghtCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MuLenghtCut_NameIntType,VisibleEnergy_MuLenghtCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_NCCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NCCut_NameIntType,VisibleEnergy_NCCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_Selection_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_Selection_NameIntType,VisibleEnergy_Selection_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PiZero_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_PiZero_NameIntType,VisibleEnergy_PiZero_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_Photon_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_Photon_NameIntType,VisibleEnergy_Photon_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonSmall_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_PhotonSmall_NameIntType,VisibleEnergy_PhotonSmall_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	    
-	      fRootHists.Weights_HistIntType[Type][inttype]  = new TH1D(Weights_NameIntType,Weights_NameIntType,100,0,2); 
-	  
-	  
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_LeptonPlusPhotonCut_NameIntType,VisibleEnergy_LeptonPlusPhotonCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.LowNCEnergy_HistIntType[Type][inttype] = new TH1D(LowNCEnergy_NameIntType,LowNCEnergy_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.ProtonE_HistIntType[Type][inttype] = new TH1D(ProtonE_NameIntType,ProtonE_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.PionE_HistIntType[Type][inttype] = new TH1D(PionE_NameIntType,PionE_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.KaonE_HistIntType[Type][inttype] = new TH1D(KaonE_NameIntType,KaonE_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.HadronE_HistIntType[Type][inttype] = new TH1D(HadronE_NameIntType,HadronE_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.PhotonCon_HistIntType[Type][inttype] = new TH1D(PhotonCon_NameIntType,PhotonCon_NameIntType,100,0,40);
-
-	      fRootHists.ProtonN_HistIntType[Type][inttype] = new TH1D(ProtonN_NameIntType,ProtonN_NameIntType,20,0,20);
-	      fRootHists.PionN_HistIntType[Type][inttype] = new TH1D(PionN_NameIntType,PionN_NameIntType,20,0,20);
-	      fRootHists.KaonN_HistIntType[Type][inttype] = new TH1D(KaonN_NameIntType,KaonN_NameIntType,20,0,20);
-	      
-	      fRootHists.VisibleEnergy_NoShowerCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NoShowerCut_NameIntType,VisibleEnergy_NoShowerCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoPhotonCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_TwoPhotonCut_NameIntType,VisibleEnergy_TwoPhotonCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoShowerCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_TwoShowerCut_NameIntType,VisibleEnergy_TwoShowerCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonFVCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_PhotonFVCut_NameIntType,VisibleEnergy_PhotonFVCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoLeptons_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_TwoLeptons_NameIntType,VisibleEnergy_TwoLeptons_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_StringAfterIntType                  = VisibleEnergy_StringAfter + " " +  std::to_string(inttype);                  
-	      std::string  VisibleEnergy_AVCut_StringAfterIntType            = VisibleEnergy_AVCut_StringAfter + " " +  std::to_string(inttype);           
-	      std::string  VisibleEnergy_FVCut_StringAfterIntType            = VisibleEnergy_FVCut_StringAfter + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergy_FVBefore_StringAfterIntType            = VisibleEnergy_FVBefore_StringAfter + " " +  std::to_string(inttype);            
-
-	      std::string  VisibleEnergy_EnergyCut_StringAfterIntType        = VisibleEnergy_EnergyCut_StringAfter + " " +  std::to_string(inttype);        
-	      std::string  VisibleEnergy_PhotonEnergyCut_StringAfterIntType  = VisibleEnergy_PhotonEnergyCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_ConversionGapCut_StringAfterIntType = VisibleEnergy_ConversionGapCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_MuLenghtCut_StringAfterIntType      = VisibleEnergy_MuLenghtCut_StringAfter + " " +  std::to_string(inttype);      
-	      std::string  VisibleEnergy_NCCut_StringAfterIntType            = VisibleEnergy_NCCut_StringAfter + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergy_Selection_StringAfterIntType        = VisibleEnergy_Selection_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_LeptonPlusPhotonCut_StringAfterIntType = VisibleEnergy_LeptonPlusPhotonCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_NoShowerCut_StringAfterIntType      = VisibleEnergy_NoShowerCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_TwoPhotonCut_StringAfterIntType     = VisibleEnergy_TwoPhotonCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string   VisibleEnergy_TwoShowerCut_StringAfterIntType     = VisibleEnergy_TwoShowerCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_PhotonFVCut_StringAfterIntType      = VisibleEnergy_PhotonFVCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergy_TwoLeptons_StringAfterIntType      = VisibleEnergy_PhotonFVCut_StringAfter + " " +  std::to_string(inttype);
-
-
-
-
-	      const char* VisibleEnergy_NameAfterIntType                  = VisibleEnergy_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_AVCut_NameAfterIntType            = VisibleEnergy_AVCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_FVCut_NameAfterIntType            = VisibleEnergy_FVCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_FVBefore_NameAfterIntType            = VisibleEnergy_FVBefore_StringAfterIntType.c_str();
-
-	      const char* VisibleEnergy_EnergyCut_NameAfterIntType        = VisibleEnergy_EnergyCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_PhotonEnergyCut_NameAfterIntType  = VisibleEnergy_PhotonEnergyCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_ConversionGapCut_NameAfterIntType = VisibleEnergy_ConversionGapCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_MuLenghtCut_NameAfterIntType      = VisibleEnergy_MuLenghtCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_NCCut_NameAfterIntType            = VisibleEnergy_NCCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_Selection_NameAfterIntType        = VisibleEnergy_Selection_StringAfterIntType.c_str();
-	      const char* VisibleEnergy_LeptonPlusPhotonCut_NameAfterIntType = VisibleEnergy_LeptonPlusPhotonCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergy_NoShowerCut_NameAfterIntType      = VisibleEnergy_NoShowerCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergy_TwoPhotonCut_NameAfterIntType     = VisibleEnergy_TwoPhotonCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergy_TwoShowerCut_NameAfterIntType     = VisibleEnergy_TwoShowerCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergy_PhotonFVCut_NameAfterIntType      = VisibleEnergy_TwoShowerCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergy_TwoLeptons_NameAfterIntType      = VisibleEnergy_TwoLeptons_StringAfterIntType.c_str();
-
-
-	      fRootHists.VisibleEnergyAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NameAfterIntType,VisibleEnergy_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_AVCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_AVCut_NameAfterIntType,VisibleEnergy_AVCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_FVCut_NameAfterIntType,VisibleEnergy_FVCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_FVBeforeAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_FVBefore_NameAfterIntType,VisibleEnergy_FVBefore_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergy_EnergyCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_EnergyCut_NameAfterIntType,VisibleEnergy_EnergyCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonEnergyCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_PhotonEnergyCut_NameAfterIntType,VisibleEnergy_PhotonEnergyCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_ConversionGapCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ConversionGapCut_NameAfterIntType,VisibleEnergy_ConversionGapCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_MuLenghtCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MuLenghtCut_NameAfterIntType,VisibleEnergy_MuLenghtCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_NCCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NCCut_NameAfterIntType,VisibleEnergy_NCCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_SelectionAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_Selection_NameAfterIntType,VisibleEnergy_Selection_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	  
-	      fRootHists.VisibleEnergy_LeptonPlusPhotonCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_LeptonPlusPhotonCut_NameAfterIntType,VisibleEnergy_LeptonPlusPhotonCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      fRootHists.VisibleEnergy_NoShowerCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NoShowerCut_NameAfterIntType,VisibleEnergy_NoShowerCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoPhotonCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_TwoPhotonCut_NameAfterIntType,VisibleEnergy_TwoPhotonCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoShowerCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_TwoShowerCut_NameAfterIntType,VisibleEnergy_TwoShowerCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_PhotonFVCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_PhotonFVCut_NameAfterIntType,VisibleEnergy_PhotonFVCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergy_TwoLeptonsAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_TwoLeptons_NameAfterIntType,VisibleEnergy_TwoLeptons_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	    }
-	  }
 	}
       }
 
@@ -2600,264 +2095,6 @@ namespace ana {
 	  fRootHists.VisibleEnergyLep_PhotonFVCutAfter_Hist[Type] = new TH1D(VisibleEnergyLep_PhotonFVCut_NameAfter,VisibleEnergyLep_PhotonFVCut_NameAfter,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
 	  fRootHists.VisibleEnergyLep_TwoLeptonsAfter_Hist[Type] = new TH1D(VisibleEnergyLep_TwoLeptons_NameAfter,VisibleEnergyLep_TwoLeptons_NameAfter,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
 
-
-	  if(fConfig.FillModeHistograms){
-
-	    for(int mode=-1; mode<6; ++mode){
-	      
-	      std::string  VisibleEnergyLep_StringMode                  = VisibleEnergyLep_String + " " +  std::to_string(mode);                  
-	      std::string  VisibleEnergyLep_AVCut_StringMode            = VisibleEnergyLep_AVCut_String + " " +  std::to_string(mode);           
-	      std::string  VisibleEnergyLep_FVCut_StringMode            = VisibleEnergyLep_FVCut_String + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergyLep_FVBefore_StringMode            = VisibleEnergyLep_FVBefore_String + " " +  std::to_string(mode);            
-
-	      std::string  VisibleEnergyLep_EnergyCut_StringMode        = VisibleEnergyLep_EnergyCut_String + " " +  std::to_string(mode);        
-	      std::string  VisibleEnergyLep_PhotonEnergyCut_StringMode  = VisibleEnergyLep_PhotonEnergyCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_ConversionGapCut_StringMode = VisibleEnergyLep_ConversionGapCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_MuLenghtCut_StringMode      = VisibleEnergyLep_MuLenghtCut_String + " " +  std::to_string(mode);      
-	      std::string  VisibleEnergyLep_NCCut_StringMode            = VisibleEnergyLep_NCCut_String + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergyLep_Selection_StringMode        = VisibleEnergyLep_Selection_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_NoShowerCut_StringMode      = VisibleEnergyLep_NoShowerCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_TwoPhotonCut_StringMode     = VisibleEnergyLep_TwoPhotonCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_TwoShowerCut_StringMode     = VisibleEnergyLep_TwoShowerCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_PhotonFVCut_StringMode      = VisibleEnergyLep_PhotonFVCut_String + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_TwoLeptons_StringMode      = VisibleEnergyLep_PhotonFVCut_String + " " +  std::to_string(mode);
-	  
-
-	      std::string  VisibleEnergyLep_LeptonPlusPhotonCut_StringMode = VisibleEnergyLep_LeptonPlusPhotonCut_String + " " +  std::to_string(mode);
-	      
-	      std::string  VisibleEnergyLep_StringAfterMode                  = VisibleEnergyLep_StringAfter + " " +  std::to_string(mode);                  
-	      std::string  VisibleEnergyLep_AVCut_StringAfterMode            = VisibleEnergyLep_AVCut_StringAfter + " " +  std::to_string(mode);           
-	      std::string  VisibleEnergyLep_FVCut_StringAfterMode            = VisibleEnergyLep_FVCut_StringAfter + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergyLep_FVBefore_StringAfterMode            = VisibleEnergyLep_FVBefore_StringAfter + " " +  std::to_string(mode);            
-
-	      std::string  VisibleEnergyLep_EnergyCut_StringAfterMode        = VisibleEnergyLep_EnergyCut_StringAfter + " " +  std::to_string(mode);        
-	      std::string  VisibleEnergyLep_PhotonEnergyCut_StringAfterMode  = VisibleEnergyLep_PhotonEnergyCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_ConversionGapCut_StringAfterMode = VisibleEnergyLep_ConversionGapCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_MuLenghtCut_StringAfterMode      = VisibleEnergyLep_MuLenghtCut_StringAfter + " " +  std::to_string(mode);      
-	      std::string  VisibleEnergyLep_NCCut_StringAfterMode            = VisibleEnergyLep_NCCut_StringAfter + " " +  std::to_string(mode);            
-	      std::string  VisibleEnergyLep_Selection_StringAfterMode        = VisibleEnergyLep_Selection_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_NoShowerCut_StringAfterMode      = VisibleEnergyLep_NoShowerCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_TwoPhotonCut_StringAfterMode     = VisibleEnergyLep_TwoPhotonCut_StringAfter + " " +  std::to_string(mode);
-	      std::string   VisibleEnergyLep_TwoShowerCut_StringAfterMode     = VisibleEnergyLep_TwoShowerCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_PhotonFVCut_StringAfterMode      = VisibleEnergyLep_PhotonFVCut_StringAfter + " " +  std::to_string(mode);
-	      std::string  VisibleEnergyLep_TwoLeptons_StringAfterMode      = VisibleEnergyLep_PhotonFVCut_StringAfter + " " +  std::to_string(mode);
-
-	      std::string  VisibleEnergyLep_LeptonPlusPhotonCut_StringAfterMode = VisibleEnergyLep_LeptonPlusPhotonCut_StringAfter + " " +  std::to_string(mode);
-
-
-	      const char* VisibleEnergyLep_NameMode                  = VisibleEnergyLep_StringMode.c_str();
-	      const char* VisibleEnergyLep_AVCut_NameMode            = VisibleEnergyLep_AVCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_FVCut_NameMode            = VisibleEnergyLep_FVCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_FVBefore_NameMode            = VisibleEnergyLep_FVBefore_StringMode.c_str();
-
-	      const char* VisibleEnergyLep_EnergyCut_NameMode        = VisibleEnergyLep_EnergyCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_PhotonEnergyCut_NameMode  = VisibleEnergyLep_PhotonEnergyCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_ConversionGapCut_NameMode = VisibleEnergyLep_ConversionGapCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_MuLenghtCut_NameMode      = VisibleEnergyLep_MuLenghtCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_NCCut_NameMode            = VisibleEnergyLep_NCCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_Selection_NameMode        = VisibleEnergyLep_Selection_StringMode.c_str();
-	      const char*  VisibleEnergyLep_NoShowerCut_NameMode      = VisibleEnergyLep_NoShowerCut_StringMode.c_str();
-	      const char*  VisibleEnergyLep_TwoPhotonCut_NameMode     = VisibleEnergyLep_TwoPhotonCut_StringMode.c_str();
-	      const char*  VisibleEnergyLep_TwoShowerCut_NameMode     = VisibleEnergyLep_TwoShowerCut_StringMode.c_str();
-	      const char*  VisibleEnergyLep_PhotonFVCut_NameMode      = VisibleEnergyLep_TwoShowerCut_StringMode.c_str();
-	      const char*  VisibleEnergyLep_TwoLeptons_NameMode      = VisibleEnergyLep_TwoLeptons_StringMode.c_str();
-
-
-	      const char* VisibleEnergyLep_LeptonPlusPhotonCut_NameMode = VisibleEnergyLep_LeptonPlusPhotonCut_StringMode.c_str();
-	      const char* VisibleEnergyLep_NameAfterMode                  = VisibleEnergyLep_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_AVCut_NameAfterMode            = VisibleEnergyLep_AVCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_FVCut_NameAfterMode            = VisibleEnergyLep_FVCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_FVBefore_NameAfterMode            = VisibleEnergyLep_FVBefore_StringAfterMode.c_str();
-
-	      const char* VisibleEnergyLep_EnergyCut_NameAfterMode        = VisibleEnergyLep_EnergyCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_PhotonEnergyCut_NameAfterMode  = VisibleEnergyLep_PhotonEnergyCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_ConversionGapCut_NameAfterMode = VisibleEnergyLep_ConversionGapCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_MuLenghtCut_NameAfterMode      = VisibleEnergyLep_MuLenghtCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_NCCut_NameAfterMode            = VisibleEnergyLep_NCCut_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_Selection_NameAfterMode        = VisibleEnergyLep_Selection_StringAfterMode.c_str();
-	      const char* VisibleEnergyLep_LeptonPlusPhotonCut_NameAfterMode = VisibleEnergyLep_LeptonPlusPhotonCut_StringAfterMode.c_str();
-
-	      const char*  VisibleEnergyLep_NoShowerCut_NameAfterMode      = VisibleEnergyLep_NoShowerCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergyLep_TwoPhotonCut_NameAfterMode     = VisibleEnergyLep_TwoPhotonCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergyLep_TwoShowerCut_NameAfterMode     = VisibleEnergyLep_TwoShowerCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergyLep_PhotonFVCut_NameAfterMode      = VisibleEnergyLep_TwoShowerCut_StringAfterMode.c_str();
-	      const char*  VisibleEnergyLep_TwoLeptons_NameAfterMode      = VisibleEnergyLep_TwoLeptons_StringAfterMode.c_str();
-
-
-	      
-
-	      fRootHists.VisibleEnergyLep_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_NameMode,VisibleEnergyLep_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_AVCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_AVCut_NameMode,VisibleEnergyLep_AVCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_FVCut_NameMode,VisibleEnergyLep_FVCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVBefore_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_FVBefore_NameMode,VisibleEnergyLep_FVBefore_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergyLep_EnergyCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_EnergyCut_NameMode,VisibleEnergyLep_EnergyCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonEnergyCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_PhotonEnergyCut_NameMode,VisibleEnergyLep_PhotonEnergyCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_ConversionGapCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_ConversionGapCut_NameMode,VisibleEnergyLep_ConversionGapCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_MuLenghtCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_MuLenghtCut_NameMode,VisibleEnergyLep_MuLenghtCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_NCCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_NCCut_NameMode,VisibleEnergyLep_NCCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_Selection_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_Selection_NameMode,VisibleEnergyLep_Selection_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	 
-	      fRootHists.VisibleEnergyLep_NoShowerCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_NoShowerCut_NameMode,VisibleEnergyLep_NoShowerCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoPhotonCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_TwoPhotonCut_NameMode,VisibleEnergyLep_TwoPhotonCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoShowerCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_TwoShowerCut_NameMode,VisibleEnergyLep_TwoShowerCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonFVCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_PhotonFVCut_NameMode,VisibleEnergyLep_PhotonFVCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoLeptons_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_TwoLeptons_NameMode,VisibleEnergyLep_TwoLeptons_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      
- 
-	      fRootHists.VisibleEnergyLep_LeptonPlusPhotonCut_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_LeptonPlusPhotonCut_NameMode,VisibleEnergyLep_LeptonPlusPhotonCut_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLepAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_NameAfterMode,VisibleEnergyLep_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_AVCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_AVCut_NameAfterMode,VisibleEnergyLep_AVCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_FVCut_NameAfterMode,VisibleEnergyLep_FVCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVBeforeAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_FVBefore_NameAfterMode,VisibleEnergyLep_FVBefore_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergyLep_EnergyCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_EnergyCut_NameAfterMode,VisibleEnergyLep_EnergyCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonEnergyCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_PhotonEnergyCut_NameAfterMode,VisibleEnergyLep_PhotonEnergyCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_ConversionGapCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_ConversionGapCut_NameAfterMode,VisibleEnergyLep_ConversionGapCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_MuLenghtCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_MuLenghtCut_NameAfterMode,VisibleEnergyLep_MuLenghtCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_NCCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_NCCut_NameAfterMode,VisibleEnergyLep_NCCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_SelectionAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_Selection_NameAfterMode,VisibleEnergyLep_Selection_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_LeptonPlusPhotonCut_NameAfterMode,VisibleEnergyLep_LeptonPlusPhotonCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      fRootHists.VisibleEnergyLep_NoShowerCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_NoShowerCut_NameAfterMode,VisibleEnergyLep_NoShowerCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoPhotonCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_TwoPhotonCut_NameAfterMode,VisibleEnergyLep_TwoPhotonCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoShowerCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_TwoShowerCut_NameAfterMode,VisibleEnergyLep_TwoShowerCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonFVCutAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_PhotonFVCut_NameAfterMode,VisibleEnergyLep_PhotonFVCut_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoLeptonsAfter_HistMode[Type][mode] = new TH1D(VisibleEnergyLep_TwoLeptons_NameAfterMode,VisibleEnergyLep_TwoLeptons_NameAfterMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-
-	    }
-	  }
-
-	  if(fConfig.FillIntTypeHistograms){
-	    for(int inttype=1000; inttype<1101; ++inttype){
-
-	      std::string  VisibleEnergyLep_StringIntType                  = VisibleEnergyLep_String + " " +  std::to_string(inttype);                  
-	      std::string  VisibleEnergyLep_AVCut_StringIntType            = VisibleEnergyLep_AVCut_String + " " +  std::to_string(inttype);           
-	      std::string  VisibleEnergyLep_FVCut_StringIntType            = VisibleEnergyLep_FVCut_String + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergyLep_FVBefore_StringIntType            = VisibleEnergyLep_FVBefore_String + " " +  std::to_string(inttype);            
-
-	      std::string  VisibleEnergyLep_EnergyCut_StringIntType        = VisibleEnergyLep_EnergyCut_String + " " +  std::to_string(inttype);        
-	      std::string  VisibleEnergyLep_PhotonEnergyCut_StringIntType  = VisibleEnergyLep_PhotonEnergyCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_ConversionGapCut_StringIntType = VisibleEnergyLep_ConversionGapCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_MuLenghtCut_StringIntType      = VisibleEnergyLep_MuLenghtCut_String + " " +  std::to_string(inttype);      
-	      std::string  VisibleEnergyLep_NCCut_StringIntType            = VisibleEnergyLep_NCCut_String + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergyLep_Selection_StringIntType        = VisibleEnergyLep_Selection_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_LeptonPlusPhotonCut_StringIntType = VisibleEnergyLep_LeptonPlusPhotonCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_NoShowerCut_StringIntType      = VisibleEnergyLep_NoShowerCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_TwoPhotonCut_StringIntType     = VisibleEnergyLep_TwoPhotonCut_String + " " +  std::to_string(inttype);
-	      std::string   VisibleEnergyLep_TwoShowerCut_StringIntType     = VisibleEnergyLep_TwoShowerCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_PhotonFVCut_StringIntType      = VisibleEnergyLep_PhotonFVCut_String + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_TwoLeptons_StringIntType      = VisibleEnergyLep_PhotonFVCut_String + " " +  std::to_string(inttype);
-
-
-	      const char* VisibleEnergyLep_NameIntType                  = VisibleEnergyLep_StringIntType.c_str();
-	      const char* VisibleEnergyLep_AVCut_NameIntType            = VisibleEnergyLep_AVCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_FVCut_NameIntType            = VisibleEnergyLep_FVCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_FVBefore_NameIntType            = VisibleEnergyLep_FVBefore_StringIntType.c_str();
-
-	      const char* VisibleEnergyLep_EnergyCut_NameIntType        = VisibleEnergyLep_EnergyCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_PhotonEnergyCut_NameIntType  = VisibleEnergyLep_PhotonEnergyCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_ConversionGapCut_NameIntType = VisibleEnergyLep_ConversionGapCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_MuLenghtCut_NameIntType      = VisibleEnergyLep_MuLenghtCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_NCCut_NameIntType            = VisibleEnergyLep_NCCut_StringIntType.c_str();
-	      const char* VisibleEnergyLep_Selection_NameIntType        = VisibleEnergyLep_Selection_StringIntType.c_str();
-	      const char*  VisibleEnergyLep_NoShowerCut_NameIntType      = VisibleEnergyLep_NoShowerCut_StringIntType.c_str();
-	      const char*  VisibleEnergyLep_TwoPhotonCut_NameIntType     = VisibleEnergyLep_TwoPhotonCut_StringIntType.c_str();
-	      const char*  VisibleEnergyLep_TwoShowerCut_NameIntType     = VisibleEnergyLep_TwoShowerCut_StringIntType.c_str();
-	      const char*  VisibleEnergyLep_PhotonFVCut_NameIntType      = VisibleEnergyLep_TwoShowerCut_StringIntType.c_str();
-	      const char*  VisibleEnergyLep_TwoLeptons_NameIntType      = VisibleEnergyLep_TwoLeptons_StringIntType.c_str();
-
-	      const char* VisibleEnergyLep_LeptonPlusPhotonCut_NameIntType = VisibleEnergyLep_LeptonPlusPhotonCut_StringIntType.c_str();
-
-	      fRootHists.VisibleEnergyLep_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_NameIntType,VisibleEnergyLep_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_AVCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_AVCut_NameIntType,VisibleEnergyLep_AVCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_FVCut_NameIntType,VisibleEnergyLep_FVCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVBefore_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_FVBefore_NameIntType,VisibleEnergyLep_FVBefore_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergyLep_EnergyCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_EnergyCut_NameIntType,VisibleEnergyLep_EnergyCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonEnergyCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_PhotonEnergyCut_NameIntType,VisibleEnergyLep_PhotonEnergyCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_ConversionGapCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_ConversionGapCut_NameIntType,VisibleEnergyLep_ConversionGapCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_MuLenghtCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_MuLenghtCut_NameIntType,VisibleEnergyLep_MuLenghtCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_NCCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_NCCut_NameIntType,VisibleEnergyLep_NCCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_Selection_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_Selection_NameIntType,VisibleEnergyLep_Selection_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_LeptonPlusPhotonCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_LeptonPlusPhotonCut_NameIntType,VisibleEnergyLep_LeptonPlusPhotonCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      
-	      fRootHists.VisibleEnergyLep_NoShowerCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_NoShowerCut_NameIntType,VisibleEnergyLep_NoShowerCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoPhotonCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_TwoPhotonCut_NameIntType,VisibleEnergyLep_TwoPhotonCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoShowerCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_TwoShowerCut_NameIntType,VisibleEnergyLep_TwoShowerCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonFVCut_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_PhotonFVCut_NameIntType,VisibleEnergyLep_PhotonFVCut_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoLeptons_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_TwoLeptons_NameIntType,VisibleEnergyLep_TwoLeptons_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergyLep_StringAfterIntType                  = VisibleEnergyLep_StringAfter + " " +  std::to_string(inttype);                  
-	      std::string  VisibleEnergyLep_AVCut_StringAfterIntType            = VisibleEnergyLep_AVCut_StringAfter + " " +  std::to_string(inttype);           
-	      std::string  VisibleEnergyLep_FVCut_StringAfterIntType            = VisibleEnergyLep_FVCut_StringAfter + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergyLep_FVBefore_StringAfterIntType            = VisibleEnergyLep_FVBefore_StringAfter + " " +  std::to_string(inttype);            
-
-	      std::string  VisibleEnergyLep_EnergyCut_StringAfterIntType        = VisibleEnergyLep_EnergyCut_StringAfter + " " +  std::to_string(inttype);        
-	      std::string  VisibleEnergyLep_PhotonEnergyCut_StringAfterIntType  = VisibleEnergyLep_PhotonEnergyCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_ConversionGapCut_StringAfterIntType = VisibleEnergyLep_ConversionGapCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_MuLenghtCut_StringAfterIntType      = VisibleEnergyLep_MuLenghtCut_StringAfter + " " +  std::to_string(inttype);      
-	      std::string  VisibleEnergyLep_NCCut_StringAfterIntType            = VisibleEnergyLep_NCCut_StringAfter + " " +  std::to_string(inttype);            
-	      std::string  VisibleEnergyLep_Selection_StringAfterIntType        = VisibleEnergyLep_Selection_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_LeptonPlusPhotonCut_StringAfterIntType = VisibleEnergyLep_LeptonPlusPhotonCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_NoShowerCut_StringAfterIntType      = VisibleEnergyLep_NoShowerCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_TwoPhotonCut_StringAfterIntType     = VisibleEnergyLep_TwoPhotonCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string   VisibleEnergyLep_TwoShowerCut_StringAfterIntType     = VisibleEnergyLep_TwoShowerCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_PhotonFVCut_StringAfterIntType      = VisibleEnergyLep_PhotonFVCut_StringAfter + " " +  std::to_string(inttype);
-	      std::string  VisibleEnergyLep_TwoLeptons_StringAfterIntType      = VisibleEnergyLep_PhotonFVCut_StringAfter + " " +  std::to_string(inttype);
-
-
-
-
-	      const char* VisibleEnergyLep_NameAfterIntType                  = VisibleEnergyLep_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_AVCut_NameAfterIntType            = VisibleEnergyLep_AVCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_FVCut_NameAfterIntType            = VisibleEnergyLep_FVCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_FVBefore_NameAfterIntType            = VisibleEnergyLep_FVBefore_StringAfterIntType.c_str();
-
-	      const char* VisibleEnergyLep_EnergyCut_NameAfterIntType        = VisibleEnergyLep_EnergyCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_PhotonEnergyCut_NameAfterIntType  = VisibleEnergyLep_PhotonEnergyCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_ConversionGapCut_NameAfterIntType = VisibleEnergyLep_ConversionGapCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_MuLenghtCut_NameAfterIntType      = VisibleEnergyLep_MuLenghtCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_NCCut_NameAfterIntType            = VisibleEnergyLep_NCCut_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_Selection_NameAfterIntType        = VisibleEnergyLep_Selection_StringAfterIntType.c_str();
-	      const char* VisibleEnergyLep_LeptonPlusPhotonCut_NameAfterIntType = VisibleEnergyLep_LeptonPlusPhotonCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergyLep_NoShowerCut_NameAfterIntType      = VisibleEnergyLep_NoShowerCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergyLep_TwoPhotonCut_NameAfterIntType     = VisibleEnergyLep_TwoPhotonCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergyLep_TwoShowerCut_NameAfterIntType     = VisibleEnergyLep_TwoShowerCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergyLep_PhotonFVCut_NameAfterIntType      = VisibleEnergyLep_TwoShowerCut_StringAfterIntType.c_str();
-	      const char*  VisibleEnergyLep_TwoLeptons_NameAfterIntType      = VisibleEnergyLep_TwoLeptons_StringAfterIntType.c_str();
-
-
-	      fRootHists.VisibleEnergyLepAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_NameAfterIntType,VisibleEnergyLep_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_AVCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_AVCut_NameAfterIntType,VisibleEnergyLep_AVCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_FVCut_NameAfterIntType,VisibleEnergyLep_FVCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_FVBeforeAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_FVBefore_NameAfterIntType,VisibleEnergyLep_FVBefore_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      fRootHists.VisibleEnergyLep_EnergyCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_EnergyCut_NameAfterIntType,VisibleEnergyLep_EnergyCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonEnergyCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_PhotonEnergyCut_NameAfterIntType,VisibleEnergyLep_PhotonEnergyCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_ConversionGapCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_ConversionGapCut_NameAfterIntType,VisibleEnergyLep_ConversionGapCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_MuLenghtCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_MuLenghtCut_NameAfterIntType,VisibleEnergyLep_MuLenghtCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_NCCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_NCCut_NameAfterIntType,VisibleEnergyLep_NCCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_SelectionAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_Selection_NameAfterIntType,VisibleEnergyLep_Selection_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      fRootHists.VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_LeptonPlusPhotonCut_NameAfterIntType,VisibleEnergyLep_LeptonPlusPhotonCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      fRootHists.VisibleEnergyLep_NoShowerCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_NoShowerCut_NameAfterIntType,VisibleEnergyLep_NoShowerCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoPhotonCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_TwoPhotonCut_NameAfterIntType,VisibleEnergyLep_TwoPhotonCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoShowerCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_TwoShowerCut_NameAfterIntType,VisibleEnergyLep_TwoShowerCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_PhotonFVCutAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_PhotonFVCut_NameAfterIntType,VisibleEnergyLep_PhotonFVCut_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      fRootHists.VisibleEnergyLep_TwoLeptonsAfter_HistIntType[Type][inttype] = new TH1D(VisibleEnergyLep_TwoLeptons_NameAfterIntType,VisibleEnergyLep_TwoLeptons_NameAfterIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	    }
-	  }
 	}
       }
       

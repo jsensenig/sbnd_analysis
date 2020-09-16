@@ -258,117 +258,6 @@ namespace ana {
 	  fRootHists.VisibleEnergy_NumneutrinosRemoved_Hist[fRootHists.HistTypes[i]]->Write(); 
 	  fRootHists.VisibleEnergy_NumneutrinosPassed_Hist[fRootHists.HistTypes[i]]->Write(); 
 
-	  if(fConfig.FillModeHistograms){
-	    for(int mode=-1; mode<6; ++mode){
-	      fOutputFile->cd("ModeHistograms");
-	      fRootHists.VisibleEnergy_MCTruth_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-	      fRootHists.TrueNumber_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_BeforeSel_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_AfterSel_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_AfterSelOne_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-	      fRootHists.VisibleEnergy_AfterSelExtra_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-	      fRootHists.VisibleEnergy_FVRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_FVPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_GtrOneShowerRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_GtrOneShowerPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_OneShowerECutRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_OneShowerECutPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_OneShowerResidualRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_OneShowerResidualPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_dEdxRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_dEdxPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_LengthRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_LengthPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_OpeningAngleRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_OpeningAnglePassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerEnergyRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerEnergyPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackPIDARemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackPIDAPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MVARemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_MVAPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_NumneutrinosRemoved_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-	      fRootHists.VisibleEnergy_NumneutrinosPassed_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-	    }
-	  }
-
-	  if(fConfig.FillIntTypeHistograms){
-	    for(int inttype=1000; inttype<1101; ++inttype){
-	      fOutputFile->cd("InteractionTypeHistograms");
-
-	      if(fRootHists.TrueNumber_HistIntType[fRootHists.HistTypes[i]][inttype]->GetEntries() == 0){continue;} 
-	      fRootHists.VisibleEnergy_MCTruth_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-
-	      fRootHists.TrueNumber_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_BeforeSel_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_AfterSel_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_AfterSelOne_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
- 	      fRootHists.VisibleEnergy_AfterSelExtra_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-	      fRootHists.VisibleEnergy_FVRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_FVPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_GtrOneShowerRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_GtrOneShowerPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_OneShowerECutRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_OneShowerECutPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_OneShowerResidualRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_OneShowerResidualPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ConversionGapPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_dEdxRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_dEdxPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_LengthRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_LengthPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_OpeningAngleRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_OpeningAnglePassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerEnergyRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerEnergyPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackPIDARemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackPIDAPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MVARemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_MVAPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-	      fRootHists.VisibleEnergy_NumneutrinosRemoved_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-	      fRootHists.VisibleEnergy_NumneutrinosPassed_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-
-	    }
-	  }
 	}
 	
 	fOutputFile->cd("Histograms");
@@ -461,7 +350,7 @@ namespace ana {
 	  int pdg = mctruth->GetNeutrino().Nu().PdgCode();
 	  float True_energy = mctruth->GetNeutrino().Nu().E();
 	  NueSelectionReco::NueInteraction intInfo({0, 0, 0, 0, 1,initnu,fnd, True_energy,mctruth,false}); 
-	  FillHistograms(fRootHists.VisibleEnergy_MCTruth_Hist,fRootHists.VisibleEnergy_MCTruth_HistMode,fRootHists.VisibleEnergy_MCTruth_HistIntType,intInfo);
+	  FillHistograms(fRootHists.VisibleEnergy_MCTruth_Hist, intInfo);
 	}
       }
       
@@ -625,7 +514,7 @@ namespace ana {
 	intInfo.weight *= fConfig.GlobalWeight;
 	
 	//Check the graphs before 
-	FillHistograms(fRootHists.VisibleEnergy_BeforeSel_Hist,fRootHists.VisibleEnergy_BeforeSel_HistMode,fRootHists.VisibleEnergy_BeforeSel_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_BeforeSel_Hist, intInfo);
 
 	//Perform the selection 
 	bool selection = Select(ev, neutrino, pfp_map,intInfo);
@@ -646,14 +535,14 @@ namespace ana {
 	  if(std::find(SelectedKeys.begin(),SelectedKeys.end(),intInfo.mctruth.key()) == SelectedKeys.end()){
 	    
 	    SelectedKeys.push_back(intInfo.mctruth.key());
-	    FillHistograms(fRootHists.VisibleEnergy_AfterSelOne_Hist,fRootHists.VisibleEnergy_AfterSelOne_HistMode,fRootHists.VisibleEnergy_AfterSelOne_HistIntType,intInfo);
+	    FillHistograms(fRootHists.VisibleEnergy_AfterSelOne_Hist, intInfo);
 	  }
 	  else{
-	    FillHistograms(fRootHists.VisibleEnergy_AfterSelExtra_Hist,fRootHists.VisibleEnergy_AfterSelExtra_HistMode,fRootHists.VisibleEnergy_AfterSelExtra_HistIntType,intInfo);
+	    FillHistograms(fRootHists.VisibleEnergy_AfterSelExtra_Hist, intInfo);
 	  }
 
 	  //check the graphs after
-	  FillHistograms(fRootHists.VisibleEnergy_AfterSel_Hist,fRootHists.VisibleEnergy_AfterSel_HistMode,fRootHists.VisibleEnergy_AfterSel_HistIntType,intInfo);
+	  FillHistograms(fRootHists.VisibleEnergy_AfterSel_Hist, intInfo);
 
 	  
 	  //Make the reco interaction event. 
@@ -886,13 +775,14 @@ namespace ana {
       bool pass_FV = passFV(vertex_position_corrected);
       if(!pass_FV){
 	if(fConfig.Verbose){
-	  std::cout << "Failed the FV cut. Event not selected with true position X:" << intInfo.mctruth->GetNeutrino().Nu().Position().Vect().X() << " Y: " << intInfo.mctruth->GetNeutrino().Nu().Position().Vect().Y() << " Z: " << intInfo.mctruth->GetNeutrino().Nu().Position().Vect().Z() << std::endl;
+	  std::cout << "Failed the FV cut. Event not selected with true position X:" << intInfo.mctruth->GetNeutrino().Nu().Position().Vect().X()
+	            << " Y: " << intInfo.mctruth->GetNeutrino().Nu().Position().Vect().Y() << " Z: " << intInfo.mctruth->GetNeutrino().Nu().Position().Vect().Z() << std::endl;
 	  std::cout << "Reco Position X: " << vertex_position.X() << " Y: " << vertex_position.Y() << " Z: " << vertex_position.Z() << std::endl;
 	}
-	FillHistograms(fRootHists.VisibleEnergy_FVRemoved_Hist,fRootHists.VisibleEnergy_FVRemoved_HistMode,fRootHists.VisibleEnergy_FVRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_FVRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_FVPassed_Hist,fRootHists.VisibleEnergy_FVPassed_HistMode,fRootHists.VisibleEnergy_FVPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_FVPassed_Hist, intInfo);
 
       //Association between Showers and pfParticle
       art::FindManyP<recob::Shower> fmsh(pfpHandle, ev, fConfig.ShowerTag);
@@ -946,10 +836,10 @@ namespace ana {
       //Remove any event without a shower
       if(neutrino_showers.size() == 0){
 	if(fConfig.Verbose){std::cout << "No showers in the event side" << std::endl;}
-	FillHistograms(fRootHists.VisibleEnergy_GtrOneShowerRemoved_Hist,fRootHists.VisibleEnergy_GtrOneShowerRemoved_HistMode,fRootHists.VisibleEnergy_GtrOneShowerRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_GtrOneShowerRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_GtrOneShowerPassed_Hist,fRootHists.VisibleEnergy_GtrOneShowerPassed_HistMode,fRootHists.VisibleEnergy_GtrOneShowerPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_GtrOneShowerPassed_Hist, intInfo);
 
 
       //Order the showers with regards to their energy
@@ -964,10 +854,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "too many showers one shower cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_OneShowerECutRemoved_Hist,fRootHists.VisibleEnergy_OneShowerECutRemoved_HistMode,fRootHists.VisibleEnergy_OneShowerECutRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_OneShowerECutRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_OneShowerECutPassed_Hist,fRootHists.VisibleEnergy_OneShowerECutPassed_HistMode,fRootHists.VisibleEnergy_OneShowerECutPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_OneShowerECutPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "passed the one shower cut" << std::endl;
       }
@@ -980,10 +870,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "failed neutrinopdgcode cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_Hist,fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_HistMode,fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_Hist,fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_HistMode,fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "passed the neutrinopdgcode cut" << std::endl;
       }
@@ -1000,10 +890,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "failed numneutrinoscode cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_NumneutrinosRemoved_Hist,fRootHists.VisibleEnergy_NumneutrinosRemoved_HistMode,fRootHists.VisibleEnergy_NumneutrinosRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_NumneutrinosRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_NumneutrinosPassed_Hist,fRootHists.VisibleEnergy_NumneutrinosPassed_HistMode,fRootHists.VisibleEnergy_NumneutrinosPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_NumneutrinosPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "passed the numneutrinoscode cut" << std::endl;
       }
@@ -1019,10 +909,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "too many showers one shower res cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_OneShowerResidualRemoved_Hist,fRootHists.VisibleEnergy_OneShowerResidualRemoved_HistMode,fRootHists.VisibleEnergy_OneShowerResidualRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_OneShowerResidualRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_OneShowerResidualPassed_Hist,fRootHists.VisibleEnergy_OneShowerResidualPassed_HistMode,fRootHists.VisibleEnergy_OneShowerResidualPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_OneShowerResidualPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "one shower res cut continuing" << std::endl;
       }     
@@ -1142,10 +1032,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the conversion gap cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_ConversionGapRemoved_Hist,fRootHists.VisibleEnergy_ConversionGapRemoved_HistMode,fRootHists.VisibleEnergy_ConversionGapRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_ConversionGapRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_ConversionGapPassed_Hist,fRootHists.VisibleEnergy_ConversionGapPassed_HistMode,fRootHists.VisibleEnergy_ConversionGapPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_ConversionGapPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the conversion gap cut" << std::endl;
       }
@@ -1156,10 +1046,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the dEdx gap cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_dEdxRemoved_Hist,fRootHists.VisibleEnergy_dEdxRemoved_HistMode,fRootHists.VisibleEnergy_dEdxRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_dEdxRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_dEdxPassed_Hist,fRootHists.VisibleEnergy_dEdxPassed_HistMode,fRootHists.VisibleEnergy_dEdxPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_dEdxPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the dEdx cut" << std::endl;
       }
@@ -1170,10 +1060,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the Length  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_LengthRemoved_Hist,fRootHists.VisibleEnergy_LengthRemoved_HistMode,fRootHists.VisibleEnergy_LengthRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_LengthRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_LengthPassed_Hist,fRootHists.VisibleEnergy_LengthPassed_HistMode,fRootHists.VisibleEnergy_LengthPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_LengthPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the Length  cut" << std::endl;
       }
@@ -1185,10 +1075,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the OpeningAngle  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_OpeningAngleRemoved_Hist,fRootHists.VisibleEnergy_OpeningAngleRemoved_HistMode,fRootHists.VisibleEnergy_OpeningAngleRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_OpeningAngleRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_OpeningAnglePassed_Hist,fRootHists.VisibleEnergy_OpeningAnglePassed_HistMode,fRootHists.VisibleEnergy_OpeningAnglePassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_OpeningAnglePassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the OpeningAngle  cut" << std::endl;
       }
@@ -1199,10 +1089,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the ShowerEnergy  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_ShowerEnergyRemoved_Hist,fRootHists.VisibleEnergy_ShowerEnergyRemoved_HistMode,fRootHists.VisibleEnergy_ShowerEnergyRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_ShowerEnergyRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_ShowerEnergyPassed_Hist,fRootHists.VisibleEnergy_ShowerEnergyPassed_HistMode,fRootHists.VisibleEnergy_ShowerEnergyPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_ShowerEnergyPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the ShowerEnergy  cut" << std::endl;
       }
@@ -1213,10 +1103,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the ShowerDensityGradient  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_Hist,fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_HistMode,fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_ShowerDensityGradientPassed_Hist,fRootHists.VisibleEnergy_ShowerDensityGradientPassed_HistMode,fRootHists.VisibleEnergy_ShowerDensityGradientPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_ShowerDensityGradientPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the ShowerDensityGradient  cut" << std::endl;
       }
@@ -1225,10 +1115,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the ShowerDensityPower  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_Hist,fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_HistMode,fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_ShowerDensityPowerPassed_Hist,fRootHists.VisibleEnergy_ShowerDensityPowerPassed_HistMode,fRootHists.VisibleEnergy_ShowerDensityPowerPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_ShowerDensityPowerPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the ShowerDensityPower  cut" << std::endl;
       }
@@ -1237,10 +1127,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the ShowerTrackLength  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_Hist,fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_HistMode,fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_ShowerTrackLengthPassed_Hist,fRootHists.VisibleEnergy_ShowerTrackLengthPassed_HistMode,fRootHists.VisibleEnergy_ShowerTrackLengthPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_ShowerTrackLengthPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the ShowerTrackLength  cut" << std::endl;
       }
@@ -1249,10 +1139,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the ShowerTrackWidth  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_Hist,fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_HistMode,fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_ShowerTrackWidthPassed_Hist,fRootHists.VisibleEnergy_ShowerTrackWidthPassed_HistMode,fRootHists.VisibleEnergy_ShowerTrackWidthPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_ShowerTrackWidthPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the ShowerTrackWidth  cut" << std::endl;
       }
@@ -1321,10 +1211,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the MaxTrackLength  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthRemoved_Hist,fRootHists.VisibleEnergy_MaxTrackLengthRemoved_HistMode,fRootHists.VisibleEnergy_MaxTrackLengthRemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthRemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthPassed_Hist,fRootHists.VisibleEnergy_MaxTrackLengthPassed_HistMode,fRootHists.VisibleEnergy_MaxTrackLengthPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the MaxTrackLength  cut" << std::endl;
       }
@@ -1333,10 +1223,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the MaxTrackPIDA  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_MaxTrackPIDARemoved_Hist,fRootHists.VisibleEnergy_MaxTrackPIDARemoved_HistMode,fRootHists.VisibleEnergy_MaxTrackPIDARemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_MaxTrackPIDARemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_MaxTrackPIDAPassed_Hist,fRootHists.VisibleEnergy_MaxTrackPIDAPassed_HistMode,fRootHists.VisibleEnergy_MaxTrackPIDAPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_MaxTrackPIDAPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the MaxTrackPIDA  cut" << std::endl;
       }
@@ -1345,10 +1235,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the MaxTrackLengthPIDA  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_Hist,fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_HistMode,fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_Hist, intInfo);
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_Hist,fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_HistMode,fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_HistIntType,intInfo);
+      FillHistograms(fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_Hist, intInfo);
       if(fConfig.Verbose){
 	std::cout << "Passed the MaxTrackLengthPIDA  cut" << std::endl;
       }
@@ -1408,10 +1298,10 @@ namespace ana {
 	if(fConfig.Verbose){
 	  std::cout << "Failed the MVA  cut" << std::endl;
 	}	
-	FillHistograms(fRootHists.VisibleEnergy_MVARemoved_Hist,fRootHists.VisibleEnergy_MVARemoved_HistMode,fRootHists.VisibleEnergy_MVARemoved_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_MVARemoved_Hist, intInfo);
 	return false;
 	}
-	FillHistograms(fRootHists.VisibleEnergy_MVAPassed_Hist,fRootHists.VisibleEnergy_MVAPassed_HistMode,fRootHists.VisibleEnergy_MVAPassed_HistIntType,intInfo);
+	FillHistograms(fRootHists.VisibleEnergy_MVAPassed_Hist, intInfo);
 	if(fConfig.Verbose){
 	  std::cout << "Passed the MVA  cut" << std::endl;
 	}
@@ -1886,15 +1776,16 @@ namespace ana {
 	
   
     //Fill the histograms.... can't think of a better comment.
-    void NueSelectionReco::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, NueSelectionReco::NueInteraction& intInfo){
+    void NueSelectionReco::FillHistograms(std::map<std::string,TH1D*>& HistMap, NueSelectionReco::NueInteraction& intInfo){
       
       double Energy = intInfo.True_energy;
       
-      FillHistograms(HistMap,HistMapMode,HistMapIntType,intInfo.mctruth->GetNeutrino(),intInfo,Energy,intInfo.booldirtevent);
+      FillHistograms(HistMap, intInfo.mctruth->GetNeutrino(),intInfo,Energy,intInfo.booldirtevent);
 
     }
 
-    void NueSelectionReco::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu, NueSelectionReco::NueInteraction& intInfo,double Energy, bool& booldirtevent){
+    void NueSelectionReco::FillHistograms(std::map<std::string,TH1D*>& HistMap, const simb::MCNeutrino& nu,
+                                          NueSelectionReco::NueInteraction& intInfo,double Energy, bool& booldirtevent){
       
       if(!fConfig.FillHistograms){return;}
 
@@ -1915,8 +1806,6 @@ namespace ana {
 	  //Check to see if we are Numu background
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["DirtNuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtNuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -1924,15 +1813,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["DirtInNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtInNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtInNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["DirtOscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtOscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)    HistMapMode["DirtOscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -1940,8 +1825,6 @@ namespace ana {
 	  //Neutral current histogtam fill
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["DirtNCNuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNCNuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtNCNuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -1949,15 +1832,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["DirtNCInNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNCInNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)    HistMapMode["DirtNCInNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["DirtNCOscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["DirtNCOscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)     HistMapMode["DirtNCOscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -1968,23 +1847,17 @@ namespace ana {
 	  //Check to see if we are Numu background
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["NuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["NuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["NuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  //Check if we are an intrinsic electron or oscillated 
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["InNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["InNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["InNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["OscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["OscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)     HistMapMode["OscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -1992,8 +1865,6 @@ namespace ana {
 	  //Neutral current histogtam fill
 	  if(nu.Nu().PdgCode() == 14){
 	    HistMap["NCNuMu"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["NCNuMu"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["NCNuMu"][mode]->Fill(Energy,intInfo.weight);
 	    return;
 	  }
 	  
@@ -2001,15 +1872,11 @@ namespace ana {
 	  if(nu.Nu().PdgCode() == intInfo.initnu){
 	    //Then we are intrinsic electrons nus 
 	    HistMap["NCInNuE"]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillIntTypeHistograms) HistMapIntType["NCInNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	    if(fConfig.FillModeHistograms)     HistMapMode["NCInNuE"][mode]->Fill(Energy,intInfo.weight);
 	  }
 	  else{
 	    if(nu.Nu().PdgCode() != intInfo.initnu){
 	      //Then we are oscilallated electrons
 	      HistMap["NCOscNuE"]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillIntTypeHistograms) HistMapIntType["NCOscNuE"][nu.InteractionType()]->Fill(Energy,intInfo.weight);
-	      if(fConfig.FillModeHistograms)     HistMapMode["NCOscNuE"][mode]->Fill(Energy,intInfo.weight);
 	    }
 	  }
 	}
@@ -2189,344 +2056,11 @@ namespace ana {
 	  const char* VisibleEnergy_NumneutrinosPassed_Name                     = VisibleEnergy_NumneutrinosPassed_String.c_str();
 	  fRootHists.VisibleEnergy_NumneutrinosPassed_Hist[Type] = new TH1D(VisibleEnergy_NumneutrinosPassed_Name,VisibleEnergy_NumneutrinosPassed_Name,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
 
-
-
-
-	  if(fConfig.FillModeHistograms){
-	    for(int mode=-1; mode<6; ++mode){
-	      std::string  TrueNumber_StringMode                     = TrueNumber_String + " " +  std::to_string(mode);
-	      const char* TrueNumber_NameMode                     = TrueNumber_StringMode.c_str();
-	      fRootHists.TrueNumber_HistMode[Type][mode] = new TH1D(TrueNumber_NameMode,TrueNumber_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_BeforeSel_StringMode                     = VisibleEnergy_BeforeSel_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_BeforeSel_NameMode                     = VisibleEnergy_BeforeSel_StringMode.c_str();
-	      fRootHists.VisibleEnergy_BeforeSel_HistMode[Type][mode] = new TH1D(VisibleEnergy_BeforeSel_NameMode,VisibleEnergy_BeforeSel_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_AfterSel_StringMode                     = VisibleEnergy_AfterSel_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_AfterSel_NameMode                     = VisibleEnergy_AfterSel_StringMode.c_str();
-	      fRootHists.VisibleEnergy_AfterSel_HistMode[Type][mode] = new TH1D(VisibleEnergy_AfterSel_NameMode,VisibleEnergy_AfterSel_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_AfterSelOne_StringMode                     = VisibleEnergy_AfterSelOne_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_AfterSelOne_NameMode                     = VisibleEnergy_AfterSelOne_StringMode.c_str();
-	      fRootHists.VisibleEnergy_AfterSelOne_HistMode[Type][mode] = new TH1D(VisibleEnergy_AfterSelOne_NameMode,VisibleEnergy_AfterSelOne_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_AfterSelExtra_StringMode                     = VisibleEnergy_AfterSelExtra_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_AfterSelExtra_NameMode                     = VisibleEnergy_AfterSelExtra_StringMode.c_str();
-	      fRootHists.VisibleEnergy_AfterSelExtra_HistMode[Type][mode] = new TH1D(VisibleEnergy_AfterSelExtra_NameMode,VisibleEnergy_AfterSelExtra_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      
-	      std::string  VisibleEnergy_MCTruth_StringMode                     = VisibleEnergy_MCTruth_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MCTruth_NameMode                     = VisibleEnergy_MCTruth_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MCTruth_HistMode[Type][mode] = new TH1D(VisibleEnergy_MCTruth_NameMode,VisibleEnergy_MCTruth_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-
-	      
-	      std::string  VisibleEnergy_FVRemoved_StringMode                     = VisibleEnergy_FVRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_FVRemoved_NameMode                     = VisibleEnergy_FVRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_FVRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_FVRemoved_NameMode,VisibleEnergy_FVRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_FVPassed_StringMode                     = VisibleEnergy_FVPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_FVPassed_NameMode                     = VisibleEnergy_FVPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_FVPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_FVPassed_NameMode,VisibleEnergy_FVPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_GtrOneShowerRemoved_StringMode                     = VisibleEnergy_GtrOneShowerRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_GtrOneShowerRemoved_NameMode                     = VisibleEnergy_GtrOneShowerRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_GtrOneShowerRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_GtrOneShowerRemoved_NameMode,VisibleEnergy_GtrOneShowerRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_GtrOneShowerPassed_StringMode                     = VisibleEnergy_GtrOneShowerPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_GtrOneShowerPassed_NameMode                     = VisibleEnergy_GtrOneShowerPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_GtrOneShowerPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_GtrOneShowerPassed_NameMode,VisibleEnergy_GtrOneShowerPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_OneShowerECutRemoved_StringMode                     = VisibleEnergy_OneShowerECutRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_OneShowerECutRemoved_NameMode                     = VisibleEnergy_OneShowerECutRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_OneShowerECutRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_OneShowerECutRemoved_NameMode,VisibleEnergy_OneShowerECutRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_OneShowerECutPassed_StringMode                     = VisibleEnergy_OneShowerECutPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_OneShowerECutPassed_NameMode                     = VisibleEnergy_OneShowerECutPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_OneShowerECutPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_OneShowerECutPassed_NameMode,VisibleEnergy_OneShowerECutPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_OneShowerResidualRemoved_StringMode                     = VisibleEnergy_OneShowerResidualRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_OneShowerResidualRemoved_NameMode                     = VisibleEnergy_OneShowerResidualRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_OneShowerResidualRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_OneShowerResidualRemoved_NameMode,VisibleEnergy_OneShowerResidualRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_OneShowerResidualPassed_StringMode                     = VisibleEnergy_OneShowerResidualPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_OneShowerResidualPassed_NameMode                     = VisibleEnergy_OneShowerResidualPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_OneShowerResidualPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_OneShowerResidualPassed_NameMode,VisibleEnergy_OneShowerResidualPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_ConversionGapRemoved_StringMode                     = VisibleEnergy_ConversionGapRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ConversionGapRemoved_NameMode                     = VisibleEnergy_ConversionGapRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ConversionGapRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_ConversionGapRemoved_NameMode,VisibleEnergy_ConversionGapRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ConversionGapPassed_StringMode                     = VisibleEnergy_ConversionGapPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ConversionGapPassed_NameMode                     = VisibleEnergy_ConversionGapPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ConversionGapPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_ConversionGapPassed_NameMode,VisibleEnergy_ConversionGapPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_dEdxRemoved_StringMode                     = VisibleEnergy_dEdxRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_dEdxRemoved_NameMode                     = VisibleEnergy_dEdxRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_dEdxRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_dEdxRemoved_NameMode,VisibleEnergy_dEdxRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_dEdxPassed_StringMode                     = VisibleEnergy_dEdxPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_dEdxPassed_NameMode                     = VisibleEnergy_dEdxPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_dEdxPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_dEdxPassed_NameMode,VisibleEnergy_dEdxPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_LengthRemoved_StringMode                     = VisibleEnergy_LengthRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_LengthRemoved_NameMode                     = VisibleEnergy_LengthRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_LengthRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_LengthRemoved_NameMode,VisibleEnergy_LengthRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_LengthPassed_StringMode                     = VisibleEnergy_LengthPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_LengthPassed_NameMode                     = VisibleEnergy_LengthPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_LengthPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_LengthPassed_NameMode,VisibleEnergy_LengthPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_OpeningAngleRemoved_StringMode                     = VisibleEnergy_OpeningAngleRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_OpeningAngleRemoved_NameMode                     = VisibleEnergy_OpeningAngleRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_OpeningAngleRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_OpeningAngleRemoved_NameMode,VisibleEnergy_OpeningAngleRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_OpeningAnglePassed_StringMode                     = VisibleEnergy_OpeningAnglePassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_OpeningAnglePassed_NameMode                     = VisibleEnergy_OpeningAnglePassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_OpeningAnglePassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_OpeningAnglePassed_NameMode,VisibleEnergy_OpeningAnglePassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerEnergyRemoved_StringMode                     = VisibleEnergy_ShowerEnergyRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerEnergyRemoved_NameMode                     = VisibleEnergy_ShowerEnergyRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerEnergyRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerEnergyRemoved_NameMode,VisibleEnergy_ShowerEnergyRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerEnergyPassed_StringMode                     = VisibleEnergy_ShowerEnergyPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerEnergyPassed_NameMode                     = VisibleEnergy_ShowerEnergyPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerEnergyPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerEnergyPassed_NameMode,VisibleEnergy_ShowerEnergyPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerDensityGradientRemoved_StringMode                     = VisibleEnergy_ShowerDensityGradientRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerDensityGradientRemoved_NameMode                     = VisibleEnergy_ShowerDensityGradientRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerDensityGradientRemoved_NameMode,VisibleEnergy_ShowerDensityGradientRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerDensityGradientPassed_StringMode                     = VisibleEnergy_ShowerDensityGradientPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerDensityGradientPassed_NameMode                     = VisibleEnergy_ShowerDensityGradientPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerDensityGradientPassed_NameMode,VisibleEnergy_ShowerDensityGradientPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerDensityPowerRemoved_StringMode                     = VisibleEnergy_ShowerDensityPowerRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerDensityPowerRemoved_NameMode                     = VisibleEnergy_ShowerDensityPowerRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerDensityPowerRemoved_NameMode,VisibleEnergy_ShowerDensityPowerRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerDensityPowerPassed_StringMode                     = VisibleEnergy_ShowerDensityPowerPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerDensityPowerPassed_NameMode                     = VisibleEnergy_ShowerDensityPowerPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerDensityPowerPassed_NameMode,VisibleEnergy_ShowerDensityPowerPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerTrackLengthRemoved_StringMode                     = VisibleEnergy_ShowerTrackLengthRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerTrackLengthRemoved_NameMode                     = VisibleEnergy_ShowerTrackLengthRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerTrackLengthRemoved_NameMode,VisibleEnergy_ShowerTrackLengthRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerTrackLengthPassed_StringMode                     = VisibleEnergy_ShowerTrackLengthPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerTrackLengthPassed_NameMode                     = VisibleEnergy_ShowerTrackLengthPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerTrackLengthPassed_NameMode,VisibleEnergy_ShowerTrackLengthPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerTrackWidthRemoved_StringMode                     = VisibleEnergy_ShowerTrackWidthRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerTrackWidthRemoved_NameMode                     = VisibleEnergy_ShowerTrackWidthRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerTrackWidthRemoved_NameMode,VisibleEnergy_ShowerTrackWidthRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerTrackWidthPassed_StringMode                     = VisibleEnergy_ShowerTrackWidthPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_ShowerTrackWidthPassed_NameMode                     = VisibleEnergy_ShowerTrackWidthPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_ShowerTrackWidthPassed_NameMode,VisibleEnergy_ShowerTrackWidthPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MaxTrackLengthRemoved_StringMode                     = VisibleEnergy_MaxTrackLengthRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MaxTrackLengthRemoved_NameMode                     = VisibleEnergy_MaxTrackLengthRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_MaxTrackLengthRemoved_NameMode,VisibleEnergy_MaxTrackLengthRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MaxTrackLengthPassed_StringMode                     = VisibleEnergy_MaxTrackLengthPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MaxTrackLengthPassed_NameMode                     = VisibleEnergy_MaxTrackLengthPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_MaxTrackLengthPassed_NameMode,VisibleEnergy_MaxTrackLengthPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MaxTrackPIDARemoved_StringMode                     = VisibleEnergy_MaxTrackPIDARemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MaxTrackPIDARemoved_NameMode                     = VisibleEnergy_MaxTrackPIDARemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackPIDARemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_MaxTrackPIDARemoved_NameMode,VisibleEnergy_MaxTrackPIDARemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MaxTrackPIDAPassed_StringMode                     = VisibleEnergy_MaxTrackPIDAPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MaxTrackPIDAPassed_NameMode                     = VisibleEnergy_MaxTrackPIDAPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackPIDAPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_MaxTrackPIDAPassed_NameMode,VisibleEnergy_MaxTrackPIDAPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MaxTrackLengthPIDARemoved_StringMode                     = VisibleEnergy_MaxTrackLengthPIDARemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MaxTrackLengthPIDARemoved_NameMode                     = VisibleEnergy_MaxTrackLengthPIDARemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_MaxTrackLengthPIDARemoved_NameMode,VisibleEnergy_MaxTrackLengthPIDARemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MaxTrackLengthPIDAPassed_StringMode                     = VisibleEnergy_MaxTrackLengthPIDAPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MaxTrackLengthPIDAPassed_NameMode                     = VisibleEnergy_MaxTrackLengthPIDAPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_MaxTrackLengthPIDAPassed_NameMode,VisibleEnergy_MaxTrackLengthPIDAPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MVARemoved_StringMode                     = VisibleEnergy_MVARemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MVARemoved_NameMode                     = VisibleEnergy_MVARemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MVARemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_MVARemoved_NameMode,VisibleEnergy_MVARemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MVAPassed_StringMode                     = VisibleEnergy_MVAPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_MVAPassed_NameMode                     = VisibleEnergy_MVAPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_MVAPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_MVAPassed_NameMode,VisibleEnergy_MVAPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_NeutrinoPdgCodeRemoved_StringMode                     = VisibleEnergy_NeutrinoPdgCodeRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_NeutrinoPdgCodeRemoved_NameMode                     = VisibleEnergy_NeutrinoPdgCodeRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_NeutrinoPdgCodeRemoved_NameMode,VisibleEnergy_NeutrinoPdgCodeRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_NeutrinoPdgCodePassed_StringMode                     = VisibleEnergy_NeutrinoPdgCodePassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_NeutrinoPdgCodePassed_NameMode                     = VisibleEnergy_NeutrinoPdgCodePassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_NeutrinoPdgCodePassed_NameMode,VisibleEnergy_NeutrinoPdgCodePassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_NumneutrinosRemoved_StringMode                     = VisibleEnergy_NumneutrinosRemoved_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_NumneutrinosRemoved_NameMode                     = VisibleEnergy_NumneutrinosRemoved_StringMode.c_str();
-	      fRootHists.VisibleEnergy_NumneutrinosRemoved_HistMode[Type][mode] = new TH1D(VisibleEnergy_NumneutrinosRemoved_NameMode,VisibleEnergy_NumneutrinosRemoved_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_NumneutrinosPassed_StringMode                     = VisibleEnergy_NumneutrinosPassed_String + " " +  std::to_string(mode);
-	      const char* VisibleEnergy_NumneutrinosPassed_NameMode                     = VisibleEnergy_NumneutrinosPassed_StringMode.c_str();
-	      fRootHists.VisibleEnergy_NumneutrinosPassed_HistMode[Type][mode] = new TH1D(VisibleEnergy_NumneutrinosPassed_NameMode,VisibleEnergy_NumneutrinosPassed_NameMode,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	    }
-	  }
-
-	  if(fConfig.FillIntTypeHistograms){
-	    for(int inttype=1000; inttype<1101; ++inttype){
-	      std::string  TrueNumber_StringIntType                     = TrueNumber_String + " " +  std::to_string(inttype);
-	      const char* TrueNumber_NameIntType                     = TrueNumber_StringIntType.c_str();
-	      fRootHists.TrueNumber_HistIntType[Type][inttype] = new TH1D(TrueNumber_NameIntType,TrueNumber_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_BeforeSel_StringIntType                     = VisibleEnergy_BeforeSel_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_BeforeSel_NameIntType                     = VisibleEnergy_BeforeSel_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_BeforeSel_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_BeforeSel_NameIntType,VisibleEnergy_BeforeSel_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_AfterSel_StringIntType                     = VisibleEnergy_AfterSel_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_AfterSel_NameIntType                     = VisibleEnergy_AfterSel_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_AfterSel_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_AfterSel_NameIntType,VisibleEnergy_AfterSel_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_AfterSelOne_StringIntType                     = VisibleEnergy_AfterSelOne_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_AfterSelOne_NameIntType                     = VisibleEnergy_AfterSelOne_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_AfterSelOne_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_AfterSelOne_NameIntType,VisibleEnergy_AfterSelOne_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_AfterSelExtra_StringIntType                     = VisibleEnergy_AfterSelExtra_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_AfterSelExtra_NameIntType                     = VisibleEnergy_AfterSelExtra_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_AfterSelExtra_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_AfterSelExtra_NameIntType,VisibleEnergy_AfterSelExtra_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_MCTruth_StringIntType                     = VisibleEnergy_MCTruth_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MCTruth_NameIntType                     = VisibleEnergy_MCTruth_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MCTruth_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MCTruth_NameIntType,VisibleEnergy_MCTruth_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-
-	      	      std::string  VisibleEnergy_FVRemoved_StringIntType                     = VisibleEnergy_FVRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_FVRemoved_NameIntType                     = VisibleEnergy_FVRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_FVRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_FVRemoved_NameIntType,VisibleEnergy_FVRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_FVPassed_StringIntType                     = VisibleEnergy_FVPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_FVPassed_NameIntType                     = VisibleEnergy_FVPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_FVPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_FVPassed_NameIntType,VisibleEnergy_FVPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_GtrOneShowerRemoved_StringIntType                     = VisibleEnergy_GtrOneShowerRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_GtrOneShowerRemoved_NameIntType                     = VisibleEnergy_GtrOneShowerRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_GtrOneShowerRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_GtrOneShowerRemoved_NameIntType,VisibleEnergy_GtrOneShowerRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_GtrOneShowerPassed_StringIntType                     = VisibleEnergy_GtrOneShowerPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_GtrOneShowerPassed_NameIntType                     = VisibleEnergy_GtrOneShowerPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_GtrOneShowerPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_GtrOneShowerPassed_NameIntType,VisibleEnergy_GtrOneShowerPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_OneShowerECutRemoved_StringIntType                     = VisibleEnergy_OneShowerECutRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_OneShowerECutRemoved_NameIntType                     = VisibleEnergy_OneShowerECutRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_OneShowerECutRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_OneShowerECutRemoved_NameIntType,VisibleEnergy_OneShowerECutRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_OneShowerECutPassed_StringIntType                     = VisibleEnergy_OneShowerECutPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_OneShowerECutPassed_NameIntType                     = VisibleEnergy_OneShowerECutPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_OneShowerECutPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_OneShowerECutPassed_NameIntType,VisibleEnergy_OneShowerECutPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_OneShowerResidualRemoved_StringIntType                     = VisibleEnergy_OneShowerResidualRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_OneShowerResidualRemoved_NameIntType                     = VisibleEnergy_OneShowerResidualRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_OneShowerResidualRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_OneShowerResidualRemoved_NameIntType,VisibleEnergy_OneShowerResidualRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_OneShowerResidualPassed_StringIntType                     = VisibleEnergy_OneShowerResidualPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_OneShowerResidualPassed_NameIntType                     = VisibleEnergy_OneShowerResidualPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_OneShowerResidualPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_OneShowerResidualPassed_NameIntType,VisibleEnergy_OneShowerResidualPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-	      std::string  VisibleEnergy_ConversionGapRemoved_StringIntType                     = VisibleEnergy_ConversionGapRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ConversionGapRemoved_NameIntType                     = VisibleEnergy_ConversionGapRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ConversionGapRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ConversionGapRemoved_NameIntType,VisibleEnergy_ConversionGapRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ConversionGapPassed_StringIntType                     = VisibleEnergy_ConversionGapPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ConversionGapPassed_NameIntType                     = VisibleEnergy_ConversionGapPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ConversionGapPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ConversionGapPassed_NameIntType,VisibleEnergy_ConversionGapPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_dEdxRemoved_StringIntType                     = VisibleEnergy_dEdxRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_dEdxRemoved_NameIntType                     = VisibleEnergy_dEdxRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_dEdxRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_dEdxRemoved_NameIntType,VisibleEnergy_dEdxRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_dEdxPassed_StringIntType                     = VisibleEnergy_dEdxPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_dEdxPassed_NameIntType                     = VisibleEnergy_dEdxPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_dEdxPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_dEdxPassed_NameIntType,VisibleEnergy_dEdxPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_LengthRemoved_StringIntType                     = VisibleEnergy_LengthRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_LengthRemoved_NameIntType                     = VisibleEnergy_LengthRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_LengthRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_LengthRemoved_NameIntType,VisibleEnergy_LengthRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_LengthPassed_StringIntType                     = VisibleEnergy_LengthPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_LengthPassed_NameIntType                     = VisibleEnergy_LengthPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_LengthPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_LengthPassed_NameIntType,VisibleEnergy_LengthPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_OpeningAngleRemoved_StringIntType                     = VisibleEnergy_OpeningAngleRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_OpeningAngleRemoved_NameIntType                     = VisibleEnergy_OpeningAngleRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_OpeningAngleRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_OpeningAngleRemoved_NameIntType,VisibleEnergy_OpeningAngleRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_OpeningAnglePassed_StringIntType                     = VisibleEnergy_OpeningAnglePassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_OpeningAnglePassed_NameIntType                     = VisibleEnergy_OpeningAnglePassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_OpeningAnglePassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_OpeningAnglePassed_NameIntType,VisibleEnergy_OpeningAnglePassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerEnergyRemoved_StringIntType                     = VisibleEnergy_ShowerEnergyRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerEnergyRemoved_NameIntType                     = VisibleEnergy_ShowerEnergyRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerEnergyRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerEnergyRemoved_NameIntType,VisibleEnergy_ShowerEnergyRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerEnergyPassed_StringIntType                     = VisibleEnergy_ShowerEnergyPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerEnergyPassed_NameIntType                     = VisibleEnergy_ShowerEnergyPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerEnergyPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerEnergyPassed_NameIntType,VisibleEnergy_ShowerEnergyPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerDensityGradientRemoved_StringIntType                     = VisibleEnergy_ShowerDensityGradientRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerDensityGradientRemoved_NameIntType                     = VisibleEnergy_ShowerDensityGradientRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerDensityGradientRemoved_NameIntType,VisibleEnergy_ShowerDensityGradientRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerDensityGradientPassed_StringIntType                     = VisibleEnergy_ShowerDensityGradientPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerDensityGradientPassed_NameIntType                     = VisibleEnergy_ShowerDensityGradientPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityGradientPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerDensityGradientPassed_NameIntType,VisibleEnergy_ShowerDensityGradientPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerDensityPowerRemoved_StringIntType                     = VisibleEnergy_ShowerDensityPowerRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerDensityPowerRemoved_NameIntType                     = VisibleEnergy_ShowerDensityPowerRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerDensityPowerRemoved_NameIntType,VisibleEnergy_ShowerDensityPowerRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerDensityPowerPassed_StringIntType                     = VisibleEnergy_ShowerDensityPowerPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerDensityPowerPassed_NameIntType                     = VisibleEnergy_ShowerDensityPowerPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerDensityPowerPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerDensityPowerPassed_NameIntType,VisibleEnergy_ShowerDensityPowerPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerTrackLengthRemoved_StringIntType                     = VisibleEnergy_ShowerTrackLengthRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerTrackLengthRemoved_NameIntType                     = VisibleEnergy_ShowerTrackLengthRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerTrackLengthRemoved_NameIntType,VisibleEnergy_ShowerTrackLengthRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerTrackLengthPassed_StringIntType                     = VisibleEnergy_ShowerTrackLengthPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerTrackLengthPassed_NameIntType                     = VisibleEnergy_ShowerTrackLengthPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackLengthPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerTrackLengthPassed_NameIntType,VisibleEnergy_ShowerTrackLengthPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_ShowerTrackWidthRemoved_StringIntType                     = VisibleEnergy_ShowerTrackWidthRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerTrackWidthRemoved_NameIntType                     = VisibleEnergy_ShowerTrackWidthRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerTrackWidthRemoved_NameIntType,VisibleEnergy_ShowerTrackWidthRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_ShowerTrackWidthPassed_StringIntType                     = VisibleEnergy_ShowerTrackWidthPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_ShowerTrackWidthPassed_NameIntType                     = VisibleEnergy_ShowerTrackWidthPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_ShowerTrackWidthPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_ShowerTrackWidthPassed_NameIntType,VisibleEnergy_ShowerTrackWidthPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MaxTrackLengthRemoved_StringIntType                     = VisibleEnergy_MaxTrackLengthRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MaxTrackLengthRemoved_NameIntType                     = VisibleEnergy_MaxTrackLengthRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MaxTrackLengthRemoved_NameIntType,VisibleEnergy_MaxTrackLengthRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MaxTrackLengthPassed_StringIntType                     = VisibleEnergy_MaxTrackLengthPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MaxTrackLengthPassed_NameIntType                     = VisibleEnergy_MaxTrackLengthPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MaxTrackLengthPassed_NameIntType,VisibleEnergy_MaxTrackLengthPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MaxTrackPIDARemoved_StringIntType                     = VisibleEnergy_MaxTrackPIDARemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MaxTrackPIDARemoved_NameIntType                     = VisibleEnergy_MaxTrackPIDARemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackPIDARemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MaxTrackPIDARemoved_NameIntType,VisibleEnergy_MaxTrackPIDARemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MaxTrackPIDAPassed_StringIntType                     = VisibleEnergy_MaxTrackPIDAPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MaxTrackPIDAPassed_NameIntType                     = VisibleEnergy_MaxTrackPIDAPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackPIDAPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MaxTrackPIDAPassed_NameIntType,VisibleEnergy_MaxTrackPIDAPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MaxTrackLengthPIDARemoved_StringIntType                     = VisibleEnergy_MaxTrackLengthPIDARemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MaxTrackLengthPIDARemoved_NameIntType                     = VisibleEnergy_MaxTrackLengthPIDARemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDARemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MaxTrackLengthPIDARemoved_NameIntType,VisibleEnergy_MaxTrackLengthPIDARemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MaxTrackLengthPIDAPassed_StringIntType                     = VisibleEnergy_MaxTrackLengthPIDAPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MaxTrackLengthPIDAPassed_NameIntType                     = VisibleEnergy_MaxTrackLengthPIDAPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MaxTrackLengthPIDAPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MaxTrackLengthPIDAPassed_NameIntType,VisibleEnergy_MaxTrackLengthPIDAPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_MVARemoved_StringIntType                     = VisibleEnergy_MVARemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MVARemoved_NameIntType                     = VisibleEnergy_MVARemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MVARemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MVARemoved_NameIntType,VisibleEnergy_MVARemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_MVAPassed_StringIntType                     = VisibleEnergy_MVAPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_MVAPassed_NameIntType                     = VisibleEnergy_MVAPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_MVAPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_MVAPassed_NameIntType,VisibleEnergy_MVAPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_NeutrinoPdgCodeRemoved_StringIntType                     = VisibleEnergy_NeutrinoPdgCodeRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_NeutrinoPdgCodeRemoved_NameIntType                     = VisibleEnergy_NeutrinoPdgCodeRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodeRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NeutrinoPdgCodeRemoved_NameIntType,VisibleEnergy_NeutrinoPdgCodeRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_NeutrinoPdgCodePassed_StringIntType                     = VisibleEnergy_NeutrinoPdgCodePassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_NeutrinoPdgCodePassed_NameIntType                     = VisibleEnergy_NeutrinoPdgCodePassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_NeutrinoPdgCodePassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NeutrinoPdgCodePassed_NameIntType,VisibleEnergy_NeutrinoPdgCodePassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-	      std::string  VisibleEnergy_NumneutrinosRemoved_StringIntType                     = VisibleEnergy_NumneutrinosRemoved_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_NumneutrinosRemoved_NameIntType                     = VisibleEnergy_NumneutrinosRemoved_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_NumneutrinosRemoved_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NumneutrinosRemoved_NameIntType,VisibleEnergy_NumneutrinosRemoved_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-	      std::string  VisibleEnergy_NumneutrinosPassed_StringIntType                     = VisibleEnergy_NumneutrinosPassed_String + " " +  std::to_string(inttype);
-	      const char* VisibleEnergy_NumneutrinosPassed_NameIntType                     = VisibleEnergy_NumneutrinosPassed_StringIntType.c_str();
-	      fRootHists.VisibleEnergy_NumneutrinosPassed_HistIntType[Type][inttype] = new TH1D(VisibleEnergy_NumneutrinosPassed_NameIntType,VisibleEnergy_NumneutrinosPassed_NameIntType,fRootHists.ebins,fRootHists.emin,fRootHists.emax);
-
-
-
 	    }
 	  }
 	}
-      }
-    }
+    //  }
+    //}
   }  // namespace SBNOsc
 }  // namespace ana
 
