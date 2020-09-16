@@ -149,157 +149,6 @@ namespace ana {
       GENIEWeight_map[1091] = {1.17868,-0.0717679};
       GENIEWeight_map[1097] = {0.854546,-0.0204999};
 
-      //Initialising the MEC Weight map.
-      // MECWeight_map["ICARUS"]["InNuE"][1001] = {1.00754,1.18254,3.51601};
-      // MECWeight_map["ICARUS"]["InNuE"][1003] = {1.03578,1.64466,2.12899};
-      // MECWeight_map["ICARUS"]["InNuE"][1004] = {1.06253,1.83729,2.63582};
-      // MECWeight_map["ICARUS"]["InNuE"][1005] = {1.18223,-3.0788,7.77411};
-      // MECWeight_map["ICARUS"]["InNuE"][1091] = {0.98294,2.63614,8.04431};
-      // MECWeight_map["ICARUS"]["InNuE"][1097] = {0.979699,1.3552,0.982815};
-      // MECWeight_map["ICARUS"]["InNuE"][1098] = {0.633218,2.09945,1.0884};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1002] = {1.02806,1.20218,2.32323};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1006] = {1.03922,-2.47018,7.96965};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1007] = {1.023,2.617,3.12625};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1008] = {0.988719,1.2917,1.74901};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1009] = {0.971067,1.52246,1.28223};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1013] = {0.387976,3.56248,8.32928};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1014] = {3.86577,-9.84088,5.15899};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1015] = {17.51,-14.3757,6.21929};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1016] = {0.425494,-0.694368,5.46637};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1092] = {1.01505,1.91317,1.76786};
-      // MECWeight_map["ICARUS"]["NCInNuE"][1096] = {0.482165,1.84919,1.10869};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1002] = {1.05194,1.10104,1.74686};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1006] = {1.07158,1.16942,1.18191};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1007] = {1.0165,1.05931,1.00825};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1008] = {0.986577,1.2544,1.43143};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1009] = {1.073,0.671748,1.48902};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1092] = {1.04116,4.57795,7.69638};
-      // MECWeight_map["ICARUS"]["NCNuMu"][1096] = {0.852231,1.22317,0.748372};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1002] = {1.00343,1.02725,1.87281};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1006] = {0.958863,1.1561,1.462};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1007] = {1.03635,1.17081,0.876149};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1008] = {1.02585,1.18397,1.17684};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1009] = {1.19696,2.89249,0.00583123};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1013] = {0.697982,2.03713,3.81921};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1014] = {0.858117,1.00461,0.630546};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1015] = {1.06073,0.796518,0.367197};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1016] = {0.843982,1.27052,0.22399};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1092] = {1.02029,1.30137,2.1216};
-      // MECWeight_map["ICARUS"]["NCOscNuE"][1096] = {1.04173,1.13053,0.759037};
-      // MECWeight_map["ICARUS"]["NuMu"][1001] = {1.09267,-0.974541,5.30914};
-      // MECWeight_map["ICARUS"]["NuMu"][1003] = {1.02895,1.33454,2.56503};
-      // MECWeight_map["ICARUS"]["NuMu"][1004] = {1.08513,1.52893,1.4254};
-      // MECWeight_map["ICARUS"]["NuMu"][1005] = {1.03796,1.36873,1.22084};
-      // MECWeight_map["ICARUS"]["NuMu"][1091] = {0.996049,1.38321,2.1598};
-      // MECWeight_map["ICARUS"]["NuMu"][1097] = {1.02223,1.33239,0.986173};
-      // MECWeight_map["ICARUS"]["OscNuE"][1001] = {1.01627,1.20791,2.14031};
-      // MECWeight_map["ICARUS"]["OscNuE"][1003] = {1.01746,1.11931,3.23307};
-      // MECWeight_map["ICARUS"]["OscNuE"][1004] = {1.00403,1.06331,1.31472};
-      // MECWeight_map["ICARUS"]["OscNuE"][1005] = {1.02676,1.16789,1.53706};
-      // MECWeight_map["ICARUS"]["OscNuE"][1091] = {1.09584,-2.74039,8.08869};
-      // MECWeight_map["ICARUS"]["OscNuE"][1097] = {1.0642,1.03104,0.878908};
-      // MECWeight_map["ICARUS"]["OscNuE"][1098] = {0.787406,-0.372674,3.44994};
-      // MECWeight_map["SBND"]["InNuE"][1001] = {0.909349,1.33457,2.87285};
-      // MECWeight_map["SBND"]["InNuE"][1003] = {0.914933,1.32031,3.94143};
-      // MECWeight_map["SBND"]["InNuE"][1004] = {0.940545,1.79466,2.06287};
-      // MECWeight_map["SBND"]["InNuE"][1005] = {0.866657,1.71607,3.53104};
-      // MECWeight_map["SBND"]["InNuE"][1091] = {0.927632,1.08278,3.92851};
-      // MECWeight_map["SBND"]["InNuE"][1097] = {0.969957,-0.450089,2.92167};
-      // MECWeight_map["SBND"]["InNuE"][1098] = {0.414376,0.601776,3.9717};
-      // MECWeight_map["SBND"]["NCInNuE"][1002] = {0.916797,1.34155,2.24621};
-      // MECWeight_map["SBND"]["NCInNuE"][1006] = {0.89958,1.25565,1.96131};
-      // MECWeight_map["SBND"]["NCInNuE"][1007] = {0.900102,1.51508,1.41904};
-      // MECWeight_map["SBND"]["NCInNuE"][1008] = {0.915634,1.67886,1.68061};
-      // MECWeight_map["SBND"]["NCInNuE"][1009] = {0.939751,1.4115,1.72854};
-      // MECWeight_map["SBND"]["NCInNuE"][1013] = {0.720146,2.12013,1.12051};
-      // MECWeight_map["SBND"]["NCInNuE"][1014] = {2.90794,12.5589,5.28556};
-      // MECWeight_map["SBND"]["NCInNuE"][1015] = {0.912586,1.29938,1.06656};
-      // MECWeight_map["SBND"]["NCInNuE"][1016] = {0.625069,-1.09846,4.02656};
-      // MECWeight_map["SBND"]["NCInNuE"][1092] = {0.881963,2.15713,2.52658};
-      // MECWeight_map["SBND"]["NCInNuE"][1096] = {0.488307,1.32607,0.939895};
-      // MECWeight_map["SBND"]["NCNuMu"][1002] = {1.21721,1.02646,2.05462};
-      // MECWeight_map["SBND"]["NCNuMu"][1006] = {3.43867,-11.0586,8.20568};
-      // MECWeight_map["SBND"]["NCNuMu"][1007] = {1.62552,-2.46786,3.91621};
-      // MECWeight_map["SBND"]["NCNuMu"][1008] = {1.12444,0.993556,1.50678};
-      // MECWeight_map["SBND"]["NCNuMu"][1009] = {1.19479,0.822479,1.67179};
-      // MECWeight_map["SBND"]["NCNuMu"][1092] = {1.18019,0.899514,2.45275};
-      // MECWeight_map["SBND"]["NCNuMu"][1096] = {1.53533,4.05814,2.07738};
-      // MECWeight_map["SBND"]["NCOscNuE"][1002] = {1.04273,1.22903,1.78029};
-      // MECWeight_map["SBND"]["NCOscNuE"][1006] = {1.50084,-6.46427,8.38485};
-      // MECWeight_map["SBND"]["NCOscNuE"][1007] = {0.981944,1.26284,1.42235};
-      // MECWeight_map["SBND"]["NCOscNuE"][1008] = {0.988806,1.14034,1.87636};
-      // MECWeight_map["SBND"]["NCOscNuE"][1009] = {1.00258,0.909995,1.25386};
-      // MECWeight_map["SBND"]["NCOscNuE"][1013] = {2.47185,-6.23185,4.96047};
-      // MECWeight_map["SBND"]["NCOscNuE"][1014] = {1.58532,1.498,0.433534};
-      // MECWeight_map["SBND"]["NCOscNuE"][1015] = {19.3425,14.9531,5.15792};
-      // MECWeight_map["SBND"]["NCOscNuE"][1016] = {1.24229,1.40831,0.461593};
-      // MECWeight_map["SBND"]["NCOscNuE"][1092] = {1.01002,2.02769,2.95598};
-      // MECWeight_map["SBND"]["NCOscNuE"][1096] = {1.15813,1.0215,0.408322};
-      // MECWeight_map["SBND"]["NuMu"][1001] = {1.18542,1.53117,5.72593};
-      // MECWeight_map["SBND"]["NuMu"][1003] = {1.22574,1.35337,3.21991};
-      // MECWeight_map["SBND"]["NuMu"][1004] = {1.2316,1.00696,1.89215};
-      // MECWeight_map["SBND"]["NuMu"][1005] = {1.14269,0.763421,2.73513};
-      // MECWeight_map["SBND"]["NuMu"][1091] = {1.20171,1.45091,2.48061};
-      // MECWeight_map["SBND"]["NuMu"][1097] = {1048.87,-16.0473,4.49884};
-      // MECWeight_map["SBND"]["OscNuE"][1001] = {1.01624,1.51105,3.15648};
-      // MECWeight_map["SBND"]["OscNuE"][1003] = {1.02042,1.50292,2.43135};
-      // MECWeight_map["SBND"]["OscNuE"][1004] = {1.03144,1.41465,2.22496};
-      // MECWeight_map["SBND"]["OscNuE"][1005] = {1.01276,0.963411,2.07326};
-      // MECWeight_map["SBND"]["OscNuE"][1091] = {0.978842,1.9671,8.20263};
-      // MECWeight_map["SBND"]["OscNuE"][1097] = {0.755367,0.787758,2.32375};
-      // MECWeight_map["SBND"]["OscNuE"][1098] = {1.3418,1.32831,0.561326};
-      // MECWeight_map["UBOONE"]["InNuE"][1001] = {0.967302,1.3232,4.26436};
-      // MECWeight_map["UBOONE"]["InNuE"][1003] = {0.974279,1.05649,4.78063};
-      // MECWeight_map["UBOONE"]["InNuE"][1004] = {1.00283,-0.0699605,7.8231};
-      // MECWeight_map["UBOONE"]["InNuE"][1005] = {0.92884,1.07184,3.11373};
-      // MECWeight_map["UBOONE"]["InNuE"][1091] = {0.962806,1.81841,2.59309};
-      // MECWeight_map["UBOONE"]["InNuE"][1097] = {0.843007,0.650223,2.61095};
-      // MECWeight_map["UBOONE"]["InNuE"][1098] = {0.377019,1.83915,2.09811};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1002] = {0.989346,1.72277,3.04771};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1006] = {1.03636,1.60584,1.78212};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1007] = {0.925134,1.85083,2.40083};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1008] = {0.966648,1.41976,1.90753};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1009] = {0.936313,1.05297,1.70373};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1013] = {2.06117,0.621816,0.0822705};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1014] = {0.590339,-1.29939,6.13645};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1015] = {0.738685,2.36891,2.29632};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1016] = {0.789607,1.96217,0.277538};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1092] = {0.936107,3.58765,7.65049};
-      // MECWeight_map["UBOONE"]["NCInNuE"][1096] = {8.63686,18.4178,7.80626};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1002] = {1.02679,1.05534,2.186};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1006] = {1.02898,1.10175,1.30697};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1007] = {1.07184,1.14692,0.897739};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1008] = {1.06476,1.21771,1.13764};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1009] = {1.84531,-4.23085,4.78537};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1092] = {0.971414,1.34581,2.44091};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1096] = {0.953025,5.01469,5.24142};
-      // MECWeight_map["UBOONE"]["NCNuMu"][1098] = {0.829187,0.913197,2.42932};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1002] = {1.01367,1.1796,1.85584};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1006] = {1.00531,1.19958,1.17791};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1007] = {1.10668,1.2309,1.39937};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1008] = {1.02413,1.14009,1.27173};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1009] = {1.03496,1.02342,1.18895};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1013] = {2.50422,7.36642,3.60874};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1014] = {1.01556,1.03634,0.870108};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1015] = {12.9448,-2.00325,1.23789};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1016] = {1.29207,1.54445,0.530082};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1092] = {1.0643,1.53987,1.73028};
-      // MECWeight_map["UBOONE"]["NCOscNuE"][1096] = {1.17772,0.943034,0.777501};
-      // MECWeight_map["UBOONE"]["NuMu"][1001] = {1.01588,0.54904,8.39826};
-      // MECWeight_map["UBOONE"]["NuMu"][1003] = {1.02961,0.983058,2.29481};
-      // MECWeight_map["UBOONE"]["NuMu"][1004] = {1.04928,1.43963,1.72202};
-      // MECWeight_map["UBOONE"]["NuMu"][1005] = {1.02698,0.341929,2.63204};
-      // MECWeight_map["UBOONE"]["NuMu"][1091] = {0.983417,1.81046,7.58807};
-      // MECWeight_map["UBOONE"]["NuMu"][1097] = {0.734648,1.07835,0.711813};
-      // MECWeight_map["UBOONE"]["OscNuE"][1001] = {1.02071,1.05916,3.31857};
-      // MECWeight_map["UBOONE"]["OscNuE"][1003] = {1.04012,1.4165,2.54485};
-      // MECWeight_map["UBOONE"]["OscNuE"][1004] = {1.00368,1.56953,1.80087};
-      // MECWeight_map["UBOONE"]["OscNuE"][1005] = {0.989574,1.43803,1.39383};
-      // MECWeight_map["UBOONE"]["OscNuE"][1091] = {1.03442,1.36656,1.75237};
-      // MECWeight_map["UBOONE"]["OscNuE"][1097] = {1.04903,1.05837,0.829909};
-      // MECWeight_map["UBOONE"]["OscNuE"][1098] = {75.6033,-13.9954,4.93722};
-
-
       if(fConfig.UseGenieHists){
 	std::string GenieDiffString = "root://fndca1.fnal.gov:1094//pnfs/fnal.gov/usr/sbnd/persistent/users/dbarker/sensitivity/RatioPlots.root";
 	const char* GenieDiffName = GenieDiffString.c_str();
@@ -718,20 +567,14 @@ namespace ana {
 	
       	mcparticles[mcparticle.TrackId()] = &mcparticle;
 
-	// if(TMath::Abs(mcparticle.PdgCode()) == 11 || TMath::Abs(mcparticle.PdgCode()) == 13){continue;}
-	
-	// if(mcparticle.PdgCode() == 22){
-	//   if(mcparticles.find(mcparticle.Mother()) != mcparticles.end()){
-	//     if(TMath::Abs(mcparticles[mcparticle.Mother()]->PdgCode()) == 13){
-	//       continue;
-	//     }
-	//   }
-	// }
-
 	if(mcparticle.E() < 0.03){continue;}
 
       	if(fConfig.Verbose){
-      	  std::cout << "MC Particle with track ID: " << mcparticle.TrackId() << " has pdgcode: " << mcparticle.PdgCode() << " with energy: " << mcparticle.E() << " and mother: " << mcparticle.Mother() << " start position: " <<  mcparticle.Vx() << ", " <<  mcparticle.Vy() << ", " <<  mcparticle.Vz() << std::endl;
+      	  std::cout << "MC Particle with track ID: " << mcparticle.TrackId()
+      	            << " has pdgcode: " << mcparticle.PdgCode()
+      	            << " with energy: " << mcparticle.E()
+      	            << " and mother: " << mcparticle.Mother()
+      	            << " start position: " <<  mcparticle.Vx() << ", " <<  mcparticle.Vy() << ", " <<  mcparticle.Vz() << std::endl;
       	}
       }
 
@@ -820,7 +663,10 @@ namespace ana {
 	      double mass = PDGMass(mct.PdgCode());
 	      TLorentzVector nuVtx     = mctruths[i].GetNeutrino().Nu().Trajectory().Position(0);
 	      TLorentzVector partstart = mct.Start().Position();
-	      std::cout << "Track with id: " << mct.TrackID() << " has pdgcode: " << mct.PdgCode() << " and energy: " << (mct.Start().E() - mass) / 1000  << " distance from vertex: " << TMath::Abs((partstart - nuVtx).Mag()) << std::endl;
+	      std::cout << "Track with id: " << mct.TrackID()
+	                << " has pdgcode: " << mct.PdgCode()
+	                << " and energy: " << (mct.Start().E() - mass) / 1000
+	                << " distance from vertex: " << TMath::Abs((partstart - nuVtx).Mag()) << std::endl;
 	    }
 	    for (auto const &mcs: mcshowers) {
 	      TLorentzVector nuVtx     = mctruths[i].GetNeutrino().Nu().Trajectory().Position(0);
@@ -829,7 +675,11 @@ namespace ana {
 
 	      if(mcs.PdgCode() == 22 && mcs.Start().E() > 100){++showers;}
 
-	      std::cout << "Shower with id: " << mcs.TrackID() << " has pdgcode: " << mcs.PdgCode() << " and energy: " << (mcs.Start().E() - mass) / 1000 <<  " distance from vertex: " << TMath::Abs((partstart - nuVtx).Mag()) << " and time: " << mcparticles[mcs.TrackID()]->T() << std::endl;
+	      std::cout << "Shower with id: " << mcs.TrackID()
+	                << " has pdgcode: " << mcs.PdgCode()
+	                << " and energy: " << (mcs.Start().E() - mass) / 1000
+	                <<  " distance from vertex: " << TMath::Abs((partstart - nuVtx).Mag())
+	                << " and time: " << mcparticles[mcs.TrackID()]->T() << std::endl;
 	    }
 	  }
 	  
@@ -1183,7 +1033,8 @@ namespace ana {
       return selected;
     }
     
-    bool NueSelection::Select(const gallery::Event& ev, const simb::MCTruth& mctruth,  unsigned i, std::map<int, const simb::MCParticle*>& mcparticles,std::map<int,double>& visible_mcparticles, NueSelection::NueInteraction& intInfo, std::vector<int>& leptontrackIDs){
+    bool NueSelection::Select(const gallery::Event& ev, const simb::MCTruth& mctruth,  unsigned i, std::map<int,
+                              const simb::MCParticle*>& mcparticles,std::map<int,double>& visible_mcparticles, NueSelection::NueInteraction& intInfo, std::vector<int>& leptontrackIDs){
 
 
       //Neutrino Info 
@@ -1863,7 +1714,9 @@ namespace ana {
     }
   
     //Fill the histograms.... can't think of a better comment.
-    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu, NueSelection::NueInteraction& intInfo, bool& booldirtevent){
+    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode,
+                                      std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu,
+                                      NueSelection::NueInteraction& intInfo, bool& booldirtevent){
       
       double Energy = intInfo.GetNueEnergy();
       
@@ -1871,7 +1724,9 @@ namespace ana {
 
     }
 
-    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode, std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu, NueSelection::NueInteraction& intInfo,double Energy, bool& booldirtevent){
+    void NueSelection::FillHistograms(std::map<std::string,TH1D*>& HistMap, std::map<std::string,std::map<int,TH1D*> >& HistMapMode,
+                                      std::map<std::string,std::map<int,TH1D*> >& HistMapIntType, const simb::MCNeutrino& nu,
+                                      NueSelection::NueInteraction& intInfo, double Energy, bool& booldirtevent){
       
       if(!fConfig.FillHistograms){return;}
 
@@ -2023,72 +1878,6 @@ namespace ana {
       return weight;
 
     }
-
-
-    double NueSelection::MECWeight(const simb::MCNeutrino& nu,std::string& Detector, NueSelection::NueInteraction& intInfo){
-      
-      double mode = nu.InteractionType();
-      //      if(nu.Mode() < -1 && nu.Mode() > 6){mode =-1;}
-
-      std::string flavour = "";
-
-      //Get the parameters.
-      if(nu.CCNC() == simb::kCC){
-	
-	//Check to see if we are Numu background
-	if(nu.Nu().PdgCode() == 14){
-	  flavour = "NuMu";
-	}
-	//Check if we are an intrinsic electron or oscillated 
-	else if(nu.Nu().PdgCode() == intInfo.initnu){
-	  flavour = "InNuE";
-	}
-	else if(nu.Nu().PdgCode() != intInfo.initnu){
-	  flavour = "OscNuE";
-	}
-      }
-      else{ 
-	  //Neutral current histogtam fill
-	  if(nu.Nu().PdgCode() == 14){
-	    flavour = "NCNuMu";
-	  }
-	  //Check if we are an intrinsic electron or oscillated 
-	  else if(nu.Nu().PdgCode() == intInfo.initnu){
-	    flavour = "NCInNuE";
-	  }
-	  else if(nu.Nu().PdgCode() != intInfo.initnu){
-	    flavour = "NCOscNuE";
-	  }
-      }
-
-      if(fConfig.Verbose){
-	std::cout << "Detector: " << Detector << " flavour: " << flavour << " mode: " << mode << std::endl;
-      }
-
-      if(flavour == ""){return 1;}
-
-      if(MECWeight_map.find(Detector) == MECWeight_map.end()){return 1;}
-      if(MECWeight_map[Detector].find(flavour) == MECWeight_map[Detector].end()){return 1;}
-      if(MECWeight_map[Detector][flavour].find(mode) == MECWeight_map[Detector][flavour].end()){return 1;}
-      
-
-      double scale = MECWeight_map[Detector][flavour][mode].at(0);
-      double mean  = MECWeight_map[Detector][flavour][mode].at(1);
-      double rms   = MECWeight_map[Detector][flavour][mode].at(2);
-      double x     = nu.Nu().E();
-      double MECWeight = scale*TMath::Exp(-((x-mean)*(x-mean))/(2*rms*rms));
-
-      if(fConfig.Verbose){
-	std::cout << "MEC Weight is: " << MECWeight << std::endl;
-
-	//	std::cout << "MEC Weight values are: " << MECWeight_map[Detector][flavour][mode].at(0) << + " 1: " << MECWeight_map[Detector][flavour][mode].at(1) << " = " <<  MECWeight_map[Detector][flavour][mode].at(0) + nu.Nu().E()*MECWeight_map[Detector][flavour][mode].at(1) << std::endl;
-      }
-
-
-      return MECWeight;
-
-    }
-
     
     void NueSelection::PrintInformation(const simb::MCTruth& mctruth, NueSelection::NueInteraction& intInfo){
       
@@ -2096,7 +1885,10 @@ namespace ana {
       std::cout << "######### Truth Neutrino Information ########" << std::endl; 
 
       std::cout << mctruth.GetNeutrino() << std::endl;
-      std::cout << "Positon X: " << mctruth.GetNeutrino().Nu().Vx() << " Y: " << mctruth.GetNeutrino().Nu().Vy() << " Z: " << mctruth.GetNeutrino().Nu().Vz() << " T: " << mctruth.GetNeutrino().Nu().T() << std::endl;
+      std::cout << "Positon X: " << mctruth.GetNeutrino().Nu().Vx()
+                << " Y: " << mctruth.GetNeutrino().Nu().Vy()
+                << " Z: " << mctruth.GetNeutrino().Nu().Vz()
+                << " T: " << mctruth.GetNeutrino().Nu().T() << std::endl;
       
       std::cout << "######### Reco Neutrino Information ########"        << std::endl;
       std::cout << "Hadronic Energy:    "     << intInfo.hadronic_energy << std::endl;
@@ -3263,7 +3055,10 @@ namespace ana {
 	int numpoints = mcparticle.second->NumberTrajectoryPoints();
 	int traj =0;
 	for(;traj<numpoints; ++traj){
-	  //	  std::cout << "position: mcparticle.second->Position(traj).Vect().X(): " << mcparticle.second->Position(traj).Vect().X() << " " << mcparticle.second->Position(traj).Vect().Y() << " "  << mcparticle.second->Position(traj).Vect().Z() << std::endl;
+	  //	  std::cout << "position: mcparticle.second->Position(traj).Vect().X(): "
+	  //	            << mcparticle.second->Position(traj).Vect().X() << " "
+	  //	            << mcparticle.second->Position(traj).Vect().Y() << " "
+	  //	            << mcparticle.second->Position(traj).Vect().Z() << std::endl;
 	  if(containedInAV(mcparticle.second->Position(traj).Vect())){break;}
 	}
 	//Never was in the tpc
