@@ -310,70 +310,6 @@ namespace ana {
 	    fRootHists.VisibleEnergyLep_TwoShowerCutAfter_Hist[fRootHists.HistTypes[i]]->Write();
 	    fRootHists.VisibleEnergyLep_PhotonFVCutAfter_Hist[fRootHists.HistTypes[i]]->Write();
 
-	    if(fConfig.FillModeHistograms){
-	      for(int mode=-1; mode<6; ++mode){
-		fOutputFile->cd("ModeHistograms");
-
-		fRootHists.VisibleEnergyLep_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_AVCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_FVCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_FVBefore_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_EnergyCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_PhotonEnergyCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_ConversionGapCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_MuLenghtCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_NCCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_LeptonPlusPhotonCut_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_Selection_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-		fRootHists.VisibleEnergyLepAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_AVCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_FVCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_FVBeforeAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_EnergyCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_PhotonEnergyCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_ConversionGapCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_MuLenghtCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_NCCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-		fRootHists.VisibleEnergyLep_SelectionAfter_HistMode[fRootHists.HistTypes[i]][mode]->Write();
-
-	      }
-	    }
-
-	    if(fConfig.FillIntTypeHistograms){
-	      for(int inttype=1000; inttype<1101; ++inttype){
-		fOutputFile->cd("InteractionTypeHistograms");
-
-		if(fRootHists.TrueNumber_HistIntType[fRootHists.HistTypes[i]][inttype]->GetEntries() == 0){continue;} 
-
-		fRootHists.VisibleEnergyLep_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_AVCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_FVCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_FVBefore_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_EnergyCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_PhotonEnergyCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_ConversionGapCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_MuLenghtCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_NCCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_LeptonPlusPhotonCut_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_Selection_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-		fRootHists.VisibleEnergyLepAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_AVCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_FVCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_FVBeforeAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_EnergyCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_PhotonEnergyCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_ConversionGapCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_MuLenghtCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_NCCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_LeptonPlusPhotonCutAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-		fRootHists.VisibleEnergyLep_SelectionAfter_HistIntType[fRootHists.HistTypes[i]][inttype]->Write();
-
-
-	      }
-	    }
 	  }
 	}
 
@@ -775,31 +711,31 @@ namespace ana {
 	      double KE = (mcparticle->E()*1000-mass)/1000;
 	      if(TMath::Abs(mcparticle->PdgCode()) == 2212){
 		++nprotons;
-		FillHistograms(fRootHists.ProtonE_Hist,fRootHists.ProtonE_HistMode,fRootHists.ProtonE_HistIntType,nu,intInfo,KE,dirtevent);
+		FillHistograms(fRootHists.ProtonE_Hist,nu,intInfo,KE,dirtevent);
 		if(KE > 0.021) HadronE += KE;
 	      }
 	      else if(TMath::Abs(mcparticle->PdgCode()) == 211){
 		++npions;
-		FillHistograms(fRootHists.PionE_Hist,fRootHists.PionE_HistMode,fRootHists.PionE_HistIntType,nu,intInfo,KE,dirtevent);
+		FillHistograms(fRootHists.PionE_Hist,nu,intInfo,KE,dirtevent);
 		HadronE += KE;
 	      }
 	      else if(TMath::Abs(mcparticle->PdgCode()) == 321){
 		++nkaons;
-		FillHistograms(fRootHists.KaonE_Hist,fRootHists.KaonE_HistMode,fRootHists.KaonE_HistIntType,nu,intInfo,mcparticle->E(),dirtevent);
+		FillHistograms(fRootHists.KaonE_Hist,nu,intInfo,mcparticle->E(),dirtevent);
 		HadronE += mcparticle->E();
 	      }
 	    }
 	  }
-	  FillHistograms(fRootHists.ProtonN_Hist,fRootHists.ProtonN_HistMode,fRootHists.ProtonN_HistIntType,nu,intInfo,nprotons,dirtevent);
-	  FillHistograms(fRootHists.PionN_Hist,fRootHists.PionN_HistMode,fRootHists.PionN_HistIntType,nu,intInfo,npions,dirtevent);
-	  FillHistograms(fRootHists.KaonN_Hist,fRootHists.KaonN_HistMode,fRootHists.KaonN_HistIntType,nu,intInfo,nkaons,dirtevent);
-	  FillHistograms(fRootHists.HadronE_Hist,fRootHists.HadronE_HistMode,fRootHists.HadronE_HistIntType,nu,intInfo,HadronE,dirtevent);
+	  FillHistograms(fRootHists.ProtonN_Hist,nu,intInfo,nprotons,dirtevent);
+	  FillHistograms(fRootHists.PionN_Hist,nu,intInfo,npions,dirtevent);
+	  FillHistograms(fRootHists.KaonN_Hist,nu,intInfo,nkaons,dirtevent);
+	  FillHistograms(fRootHists.HadronE_Hist,nu,intInfo,HadronE,dirtevent);
 	  
 
 	  //Fill the number graphs
-	  FillHistograms(fRootHists.TrueNumber_Hist,fRootHists.TrueNumber_HistMode,fRootHists.TrueNumber_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	  FillHistograms(fRootHists.TrueEnergyAll_Hist,fRootHists.TrueEnergyAll_HistMode,fRootHists.TrueEnergyAll_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	  FillHistograms(fRootHists.Weights_Hist,fRootHists.Weights_HistMode,fRootHists.Weights_HistIntType,nu,intInfo,intInfo.weight,dirtevent);  
+	  FillHistograms(fRootHists.TrueNumber_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.TrueEnergyAll_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.Weights_Hist,nu,intInfo,intInfo.weight,dirtevent);
 
 	  //Selection Criteria 
 	  //Check for Tracks - Remove any track that come from the neutrino if 1m 
@@ -838,10 +774,10 @@ namespace ana {
 	    selected =  selection;
 
 	    //Fill the histograms
-	    FillHistograms(fRootHists.VisibleEnergy_Selection_Hist,fRootHists.VisibleEnergy_Selection_HistMode,fRootHists.VisibleEnergy_Selection_HistIntType,nu,intInfo,dirtevent);
-	    FillHistograms(fRootHists.VisibleEnergy_Selection_Hist,fRootHists.VisibleEnergy_Selection_HistMode,fRootHists.VisibleEnergy_Selection_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergy_Selection_Hist,nu,intInfo,dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergy_Selection_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
-	    FillHistograms(fRootHists.TrueEnergy_Hist,fRootHists.TrueEnergy_HistMode,fRootHists.TrueEnergy_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
+	    FillHistograms(fRootHists.TrueEnergy_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
 	    //	    FillHistograms(fRootHists.Weights_Hist,nu,intInfo,intInfo.weight,dirtevent);
 	    
 	    NuCount++;
@@ -866,7 +802,7 @@ namespace ana {
 	      if(mctruth.GetNeutrino().CCNC() == simb::kNC){
 		if(intInfo.weight > 0.1){std::cout << "dodgy weight" << std::endl;}
 		if(intInfo.GetNueEnergy() < 0.35){
-		  FillHistograms(fRootHists.LowNCEnergy_Hist,fRootHists.LowNCEnergy_HistMode,fRootHists.LowNCEnergy_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
+		  FillHistograms(fRootHists.LowNCEnergy_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
 		}
 	      }
 	      if(mctruth.GetNeutrino().CCNC() == simb::kNC && showers>2){std::cout << "More than one shower" << std::endl;}
@@ -874,7 +810,7 @@ namespace ana {
 	    
 	    PrintInformation(mctruth, intInfo);
 	  }
-	  FillHistograms(fRootHists.TrueEnergyAll_Hist,fRootHists.TrueEnergyAll_HistMode,fRootHists.TrueEnergyAll_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.TrueEnergyAll_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
 	  ++truth_int;
 	}
 	
@@ -963,8 +899,8 @@ namespace ana {
       //Resetting direvent bool
       dirtevent = false;
       // pass activevolume cut                               
-      FillHistograms(fRootHists.VisibleEnergy_AVCut_Hist,fRootHists.VisibleEnergy_AVCut_HistMode,fRootHists.VisibleEnergy_AVCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-      FillHistograms(fRootHists.VisibleEnergyLep_AVCut_Hist,fRootHists.VisibleEnergyLep_AVCut_HistMode,fRootHists.VisibleEnergyLep_AVCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+      FillHistograms(fRootHists.VisibleEnergy_AVCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_AVCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
       fRootHists.XZNu->Fill(nu.Nu().Position().Vect().X(),nu.Nu().Position().Vect().Z());
       fRootHists.YZNu->Fill(nu.Nu().Position().Vect().Y(),nu.Nu().Position().Vect().Z());
@@ -982,12 +918,12 @@ namespace ana {
 	if(fConfig.DirtOnly){return false;}
       }
       if(fConfig.Verbose){std::cout << "Passed the AV Cut" << std::endl;}
-      FillHistograms(fRootHists.VisibleEnergy_AVCutAfter_Hist,fRootHists.VisibleEnergy_AVCutAfter_HistMode,fRootHists.VisibleEnergy_AVCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-      FillHistograms(fRootHists.VisibleEnergyLep_AVCutAfter_Hist,fRootHists.VisibleEnergyLep_AVCutAfter_HistMode,fRootHists.VisibleEnergyLep_AVCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+      FillHistograms(fRootHists.VisibleEnergy_AVCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_AVCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
-      FillHistograms(fRootHists.VisibleEnergy_TwoLeptons_Hist,fRootHists.VisibleEnergy_TwoLeptons_HistMode,fRootHists.VisibleEnergy_TwoLeptons_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-      FillHistograms(fRootHists.VisibleEnergyLep_TwoLeptons_Hist,fRootHists.VisibleEnergyLep_TwoLeptons_HistMode,fRootHists.VisibleEnergyLep_TwoLeptons_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+      FillHistograms(fRootHists.VisibleEnergy_TwoLeptons_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_TwoLeptons_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
       //If there two or more lepton candiates we remove the events.
       if(leptontrackIDs.size() > 1){
@@ -996,8 +932,8 @@ namespace ana {
 	}
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_TwoLeptonsAfter_Hist,fRootHists.VisibleEnergy_TwoLeptonsAfter_HistMode,fRootHists.VisibleEnergy_TwoLeptonsAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-      FillHistograms(fRootHists.VisibleEnergyLep_TwoLeptonsAfter_Hist,fRootHists.VisibleEnergyLep_TwoLeptonsAfter_HistMode,fRootHists.VisibleEnergyLep_TwoLeptonsAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+      FillHistograms(fRootHists.VisibleEnergy_TwoLeptonsAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_TwoLeptonsAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
       
       //#######################
@@ -1011,7 +947,7 @@ namespace ana {
 	for(int pi=0; pi<pi_zeros.size(); ++pi){
 
 	  const simb::MCParticle* pizero = mcparticles[pi_zeros[pi]];
-	  FillHistograms(fRootHists.VisibleEnergy_PiZero_Hist,fRootHists.VisibleEnergy_PiZero_HistMode,fRootHists.VisibleEnergy_PiZero_HistIntType,nu,intInfo,pizero->E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergy_PiZero_Hist,nu,intInfo,pizero->E(),dirtevent);
 	}
       }
 
@@ -1054,9 +990,9 @@ namespace ana {
       }
 
 
-      FillHistograms(fRootHists.VisibleEnergy_Photon_Hist,fRootHists.VisibleEnergy_Photon_HistMode,fRootHists.VisibleEnergy_Photon_HistIntType,nu,intInfo,EBig,dirtevent);
-      FillHistograms(fRootHists.VisibleEnergy_PhotonSmall_Hist,fRootHists.VisibleEnergy_PhotonSmall_HistMode,fRootHists.VisibleEnergy_PhotonSmall_HistIntType,nu,intInfo,ESmall,dirtevent);
-      FillHistograms(fRootHists.PhotonCon_Hist,fRootHists.PhotonCon_HistMode,fRootHists.PhotonCon_HistIntType,nu,intInfo,convdist,dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_Photon_Hist,nu,intInfo,EBig,dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_PhotonSmall_Hist,nu,intInfo,ESmall,dirtevent);
+      FillHistograms(fRootHists.PhotonCon_Hist,nu,intInfo,convdist,dirtevent);
 
 
       //Calculate the visible photon energy
@@ -1066,8 +1002,8 @@ namespace ana {
       if(fConfig.Verbose){std::cout << "Number of pi_zeros: " << pi_zeros.size() << " Number of photons: " << photons.size() << std::endl;}
 
       
-      FillHistograms(fRootHists.VisibleEnergy_NoShowerCut_Hist,fRootHists.VisibleEnergy_NoShowerCut_HistMode,fRootHists.VisibleEnergy_NoShowerCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-      FillHistograms(fRootHists.VisibleEnergyLep_NoShowerCut_Hist,fRootHists.VisibleEnergyLep_NoShowerCut_HistMode,fRootHists.VisibleEnergyLep_NoShowerCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+      FillHistograms(fRootHists.VisibleEnergy_NoShowerCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_NoShowerCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
       //Check to see if there is actually a shower
@@ -1076,16 +1012,16 @@ namespace ana {
 	return false;
       }
 
-      FillHistograms(fRootHists.VisibleEnergy_NoShowerCutAfter_Hist,fRootHists.VisibleEnergy_NoShowerCutAfter_HistMode,fRootHists.VisibleEnergy_NoShowerCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-      FillHistograms(fRootHists.VisibleEnergyLep_NoShowerCutAfter_Hist,fRootHists.VisibleEnergyLep_NoShowerCutAfter_HistMode,fRootHists.VisibleEnergyLep_NoShowerCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+      FillHistograms(fRootHists.VisibleEnergy_NoShowerCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_NoShowerCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
       //Single photons can mimic the Nue CC events they come from NC events and misidentified Numu CC events.
       if(photons.size() > 0){
 
 	
-	FillHistograms(fRootHists.VisibleEnergy_TwoPhotonCut_Hist,fRootHists.VisibleEnergy_TwoPhotonCut_HistMode,fRootHists.VisibleEnergy_TwoPhotonCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	FillHistograms(fRootHists.VisibleEnergyLep_TwoPhotonCut_Hist,fRootHists.VisibleEnergyLep_TwoPhotonCut_HistMode,fRootHists.VisibleEnergyLep_TwoPhotonCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	FillHistograms(fRootHists.VisibleEnergy_TwoPhotonCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	FillHistograms(fRootHists.VisibleEnergyLep_TwoPhotonCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 	
 	int photon_trackID = -1;
 	//Check to see if there are two photons are above 200 MeV and so are detectable.
@@ -1098,28 +1034,28 @@ namespace ana {
 	}
       	if(fConfig.Verbose){std::cout << "Passed the Photon Energy Cut" << std::endl;}
 
-	FillHistograms(fRootHists.VisibleEnergy_TwoPhotonCutAfter_Hist,fRootHists.VisibleEnergy_TwoPhotonCutAfter_HistMode,fRootHists.VisibleEnergy_TwoPhotonCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	FillHistograms(fRootHists.VisibleEnergyLep_TwoPhotonCutAfter_Hist,fRootHists.VisibleEnergyLep_TwoPhotonCutAfter_HistMode,fRootHists.VisibleEnergyLep_TwoPhotonCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	FillHistograms(fRootHists.VisibleEnergy_TwoPhotonCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	FillHistograms(fRootHists.VisibleEnergyLep_TwoPhotonCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
-	FillHistograms(fRootHists.VisibleEnergy_TwoShowerCut_Hist,fRootHists.VisibleEnergy_TwoShowerCut_HistMode,fRootHists.VisibleEnergy_TwoShowerCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	FillHistograms(fRootHists.VisibleEnergyLep_TwoShowerCut_Hist,fRootHists.VisibleEnergyLep_TwoShowerCut_HistMode,fRootHists.VisibleEnergyLep_TwoShowerCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	FillHistograms(fRootHists.VisibleEnergy_TwoShowerCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	FillHistograms(fRootHists.VisibleEnergyLep_TwoShowerCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
 	//Unfortunatly we must remove CC events where a photon exists (at this stage one photon exists)
 	if(intInfo.leptontrackID > 0 && intInfo.leptonic_energy*1000 > fConfig.showerVisibleEnergyThreshold){
-	  FillHistograms(fRootHists.VisibleEnergy_LeptonPlusPhotonCut_Hist,fRootHists.VisibleEnergy_LeptonPlusPhotonCut_HistMode,fRootHists.VisibleEnergy_LeptonPlusPhotonCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergy_LeptonPlusPhotonCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
 	  if(fConfig.Verbose){std::cout << "Failed becuase lepton + shower exists. Event Not Selected" << std::endl;}
 	  return false;
 	}
 	if(fConfig.Verbose){std::cout << "Passed the lepton + photon cut" << std::endl;}
 
-	FillHistograms(fRootHists.VisibleEnergy_TwoShowerCutAfter_Hist,fRootHists.VisibleEnergy_TwoShowerCutAfter_HistMode,fRootHists.VisibleEnergy_TwoShowerCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	FillHistograms(fRootHists.VisibleEnergyLep_TwoShowerCutAfter_Hist,fRootHists.VisibleEnergyLep_TwoShowerCutAfter_HistMode,fRootHists.VisibleEnergyLep_TwoShowerCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	FillHistograms(fRootHists.VisibleEnergy_TwoShowerCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	FillHistograms(fRootHists.VisibleEnergyLep_TwoShowerCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	
-	FillHistograms(fRootHists.VisibleEnergy_PhotonFVCut_Hist,fRootHists.VisibleEnergy_PhotonFVCut_HistMode,fRootHists.VisibleEnergy_PhotonFVCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	FillHistograms(fRootHists.VisibleEnergyLep_PhotonFVCut_Hist,fRootHists.VisibleEnergyLep_PhotonFVCut_HistMode,fRootHists.VisibleEnergyLep_PhotonFVCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	FillHistograms(fRootHists.VisibleEnergy_PhotonFVCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	FillHistograms(fRootHists.VisibleEnergyLep_PhotonFVCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
 	//No photon was matched in the FV the track id is not set remove event.
@@ -1128,8 +1064,8 @@ namespace ana {
 	  return false;
 	}
 
-	FillHistograms(fRootHists.VisibleEnergy_PhotonFVCutAfter_Hist,fRootHists.VisibleEnergy_PhotonFVCutAfter_HistMode,fRootHists.VisibleEnergy_PhotonFVCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	FillHistograms(fRootHists.VisibleEnergyLep_PhotonFVCutAfter_Hist,fRootHists.VisibleEnergyLep_PhotonFVCutAfter_HistMode,fRootHists.VisibleEnergyLep_PhotonFVCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	FillHistograms(fRootHists.VisibleEnergy_PhotonFVCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	FillHistograms(fRootHists.VisibleEnergyLep_PhotonFVCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	//	std::cout << "photon_trackID: " << photon_trackID << " intInfo.leptontrackID: " << intInfo.leptontrackID << std::endl;
    
@@ -1164,13 +1100,13 @@ namespace ana {
 	  intInfo.leptonic_energy = smearLeptonEnergy(rand,photonenergy,calculator.lepton_pdgid,calculator);
 	  intInfo.leptonpdgID = 22; 
 
-	  FillHistograms(fRootHists.VisibleEnergy_PhotonEnergyCut_Hist,fRootHists.VisibleEnergy_PhotonEnergyCut_HistMode,fRootHists.VisibleEnergy_PhotonEnergyCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	  FillHistograms(fRootHists.VisibleEnergyLep_PhotonEnergyCut_Hist,fRootHists.VisibleEnergyLep_PhotonEnergyCut_HistMode,fRootHists.VisibleEnergyLep_PhotonEnergyCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergy_PhotonEnergyCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergyLep_PhotonEnergyCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	  if(!dirtevent){
 
-	    FillHistograms(fRootHists.VisibleEnergy_ConversionGapCut_Hist,fRootHists.VisibleEnergy_ConversionGapCut_HistMode,fRootHists.VisibleEnergy_ConversionGapCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	    FillHistograms(fRootHists.VisibleEnergyLep_ConversionGapCut_Hist,fRootHists.VisibleEnergyLep_ConversionGapCut_HistMode,fRootHists.VisibleEnergyLep_ConversionGapCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergy_ConversionGapCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergyLep_ConversionGapCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
 	    //If hadrons produce have more than 50 MeV vertex is visible. If all photons pair produce more than 3cm away from the vertex remove.
@@ -1181,12 +1117,12 @@ namespace ana {
 	    }
 	    if(fConfig.Verbose){std::cout << "Passed the Photon Conversion gap Cut" << std::endl;}
 	    
-	    FillHistograms(fRootHists.VisibleEnergy_ConversionGapCutAfter_Hist,fRootHists.VisibleEnergy_ConversionGapCutAfter_HistMode,fRootHists.VisibleEnergy_ConversionGapCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	    FillHistograms(fRootHists.VisibleEnergyLep_ConversionGapCutAfter_Hist,fRootHists.VisibleEnergyLep_ConversionGapCutAfter_HistMode,fRootHists.VisibleEnergyLep_ConversionGapCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergy_ConversionGapCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergyLep_ConversionGapCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	 
-	    FillHistograms(fRootHists.VisibleEnergy_MuLenghtCut_Hist,fRootHists.VisibleEnergy_MuLenghtCut_HistMode,fRootHists.VisibleEnergy_MuLenghtCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	    FillHistograms(fRootHists.VisibleEnergyLep_MuLenghtCut_Hist,fRootHists.VisibleEnergyLep_MuLenghtCut_HistMode,fRootHists.VisibleEnergyLep_MuLenghtCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	    FillHistograms(fRootHists.VisibleEnergy_MuLenghtCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergyLep_MuLenghtCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
    
 	    //Check if it is a numu CC where the muon is less than 1m
@@ -1196,20 +1132,20 @@ namespace ana {
 	      return false;
 	    }
 	    if(fConfig.Verbose){std::cout << "Passed the muon min length Cut" << std::endl;}
-	    FillHistograms(fRootHists.VisibleEnergy_MuLenghtCutAfter_Hist,fRootHists.VisibleEnergy_MuLenghtCutAfter_HistMode,fRootHists.VisibleEnergy_MuLenghtCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent); 
-	    FillHistograms(fRootHists.VisibleEnergyLep_MuLenghtCutAfter_Hist,fRootHists.VisibleEnergyLep_MuLenghtCutAfter_HistMode,fRootHists.VisibleEnergyLep_MuLenghtCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent); 
+	    FillHistograms(fRootHists.VisibleEnergy_MuLenghtCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	    FillHistograms(fRootHists.VisibleEnergyLep_MuLenghtCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	  }
 	
 	
 	  //Remove 94% on a dEdx cut                                       
-	  FillHistograms(fRootHists.VisibleEnergy_NCCut_Hist,fRootHists.VisibleEnergy_NCCut_HistMode,fRootHists.VisibleEnergy_NCCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	  FillHistograms(fRootHists.VisibleEnergyLep_NCCut_Hist,fRootHists.VisibleEnergyLep_NCCut_HistMode,fRootHists.VisibleEnergyLep_NCCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergy_NCCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergyLep_NCCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	  bool pass_dEdxCut = passdEdxCut(22);
 	  if(!pass_dEdxCut){intInfo.weight *= fConfig.dEdxPhotonCut;}
-	  FillHistograms(fRootHists.VisibleEnergy_NCCutAfter_Hist,fRootHists.VisibleEnergy_NCCutAfter_HistMode,fRootHists.VisibleEnergy_NCCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-	  FillHistograms(fRootHists.VisibleEnergyLep_NCCutAfter_Hist,fRootHists.VisibleEnergyLep_NCCutAfter_HistMode,fRootHists.VisibleEnergyLep_NCCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergy_NCCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+	  FillHistograms(fRootHists.VisibleEnergyLep_NCCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 	}
       }
@@ -1218,9 +1154,9 @@ namespace ana {
       //### Fiducal Volume cut ###
       //##########################
       
-      FillHistograms(fRootHists.VisibleEnergy_FVBefore_Hist,fRootHists.VisibleEnergy_FVBefore_HistMode,fRootHists.VisibleEnergy_FVBefore_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-      FillHistograms(fRootHists.VisibleEnergy_FVCut_Hist,fRootHists.VisibleEnergy_FVCut_HistMode,fRootHists.VisibleEnergy_FVCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-      FillHistograms(fRootHists.VisibleEnergyLep_FVCut_Hist,fRootHists.VisibleEnergyLep_FVCut_HistMode,fRootHists.VisibleEnergyLep_FVCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_FVBefore_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_FVCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_FVCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
     // pass fiducial volume cut (already passed on photon events. )                                             
       if(intInfo.leptonpdgID == 11){
@@ -1233,15 +1169,15 @@ namespace ana {
 	//Should have no dirts here.
 
       }
-      FillHistograms(fRootHists.VisibleEnergy_FVCutAfter_Hist,fRootHists.VisibleEnergy_FVCutAfter_HistMode,fRootHists.VisibleEnergy_FVCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-      FillHistograms(fRootHists.VisibleEnergyLep_FVCutAfter_Hist,fRootHists.VisibleEnergyLep_FVCutAfter_HistMode,fRootHists.VisibleEnergyLep_FVCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_FVCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_FVCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
       //##################
       //### Energy Cut ###
       //##################
 
-      FillHistograms(fRootHists.VisibleEnergy_EnergyCut_Hist,fRootHists.VisibleEnergy_EnergyCut_HistMode,fRootHists.VisibleEnergy_EnergyCut_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-      FillHistograms(fRootHists.VisibleEnergyLep_EnergyCut_Hist,fRootHists.VisibleEnergyLep_EnergyCut_HistMode,fRootHists.VisibleEnergyLep_EnergyCut_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_EnergyCut_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_EnergyCut_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
 
       //Check the electron is not removed due to the 200 MeV cut. Just check we havn't matched 
@@ -1250,8 +1186,8 @@ namespace ana {
 	if(fConfig.Verbose){std::cout << "Shower was too low in energy. Event not Selected" << std::endl;}
 	return false;
       }
-      FillHistograms(fRootHists.VisibleEnergy_EnergyCutAfter_Hist,fRootHists.VisibleEnergy_EnergyCutAfter_HistMode,fRootHists.VisibleEnergy_EnergyCutAfter_HistIntType,nu,intInfo,nu.Nu().E(),dirtevent);
-      FillHistograms(fRootHists.VisibleEnergyLep_EnergyCutAfter_Hist,fRootHists.VisibleEnergyLep_EnergyCutAfter_HistMode,fRootHists.VisibleEnergyLep_EnergyCutAfter_HistIntType,nu,intInfo,nu.Lepton().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergy_EnergyCutAfter_Hist,nu,intInfo,nu.Nu().E(),dirtevent);
+      FillHistograms(fRootHists.VisibleEnergyLep_EnergyCutAfter_Hist,nu,intInfo,nu.Lepton().E(),dirtevent);
 
       if(fConfig.Verbose){std::cout << "Passed the Energy Cut." << std::endl;}
 	
