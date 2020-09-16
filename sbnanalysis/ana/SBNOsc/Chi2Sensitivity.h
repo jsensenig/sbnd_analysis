@@ -27,18 +27,11 @@ class Chi2Sensitivity: public core::PostProcessorBase {
         // Implement post-processor
         void Initialize(fhicl::ParameterSet* config);
         void ProcessEvent(const event::Event* event);
-        void ProcessSubRun(const SubRun *subrun);
         void FileCleanup(TTree* eventTree);
 
-        void Finalize() { 
-          for (int i = 0; i < fEventSamples.size(); i++) {
-            std::cout << "POT: " << fEventSamples[i].fPOT << " to: " << fEventSamples[i].fScalePOT << " factor: " << fEventSamples[i].fScalePOT / fEventSamples[i].fPOT << std::endl;
-          }
-
-        fCovariance.Finalize(); Scale(); GetChi2(); GetContours(); Write(); }
+        void Finalize() { fCovariance.Finalize(); GetChi2(); GetContours(); Write(); }
 
         // API Functions
-        void Scale();
         void GetChi2();
         void GetContours();
         void Write();
@@ -65,17 +58,12 @@ class Chi2Sensitivity: public core::PostProcessorBase {
  
             // Config
             std::string fName;
-            double fBaseline; //!< baseline (along z) in cm
-            double fBeamCenterX; //!< Center of beam in detector coordinates in x-dir in cm
-            double fBeamCenterY; //!< Center of beam in detector coordinates in y-dir in cm
-            double fBeamFrontZ; //!< Front face of detector along z-dir in cm
+            double fDistance; //!< Distance in km
             std::array<double, 2> fXlim; //!< Detector size in cm
             std::array<double, 2> fYlim; //!< Detector size in cm
             std::array<double, 2> fZlim; //!< Detector size in cm
-            double fScalePOT; //!< Factor for POT (etc.) scaling   
-            double fPOT;
+            double fScaleFactor; //!< Factor for POT (etc.) scaling   
             int fOscType; //!< Oscilaltion type: 0 == None, 1 == numu -> nue, 2 == numu -> numu
-             std::vector<double> fEnergyBinScale;
 
             // Storage
             TH1D *fBkgCounts; //!< Background count Histogram
@@ -95,6 +83,7 @@ class Chi2Sensitivity: public core::PostProcessorBase {
         int fNumDm2;
         int fNumSin;
         std::vector <double> fLogDm2Lims, fLogSinLims;
+        std::vector<std::string> fUniformWeights;
         
         std::string fOutputFile;
         // whether to save stuff

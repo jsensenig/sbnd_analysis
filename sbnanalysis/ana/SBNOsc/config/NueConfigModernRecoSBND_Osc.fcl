@@ -1,0 +1,27 @@
+#include "NueConfig.fcl"    
+
+OutputFile: "output_SBNOsc_NueSelection_Proposal_SBND.root"
+#MCWeightTags: ["genieeventweight" ] 
+#MCWeightTags: @local::eventweight_tags
+MCWeightTags: ["fluxeventweightA", "genieeventweightA", "genieeventweightB", "fluxeventweightB"]   
+
+ExperimentID: 0
+
+NueSelection: {
+  fiducial_volumes: @local::SBND_Proposal_fiducial_volumes 
+  active_volumes: @local::SBND_Proposal_active_volumes 
+  @table::reco_selection
+  UniformWeights: @local::standard_UniformWeights
+  ApplyKMECCut: false
+  Verbose: false
+  Detector: "SBND"
+  IncludeCosmics: false
+  IncludeDirt:    false 
+  OscOnly:       true
+  ApplyGENIEVersionWeight: false
+  DontUseSimChannels: false
+  UseGenieHists: false
+    FillHistograms: true
+  #MCTruths: [ "generator" ]
+}
+

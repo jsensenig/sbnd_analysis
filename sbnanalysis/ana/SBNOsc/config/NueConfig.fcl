@@ -1,3 +1,363 @@
+BEGIN_PROLOG
 OutputFile: "output_SBNOsc_NueSelection.root"
-NueSelection: {}
+
+eventweight_tags: ["genieeventweight"]
+
+SBND_fiducial_volumes: [
+    {
+      xmin: -190.9
+      ymin: -185
+      zmin: 15.
+      xmax: -5.6
+      ymax: 185
+      zmax: 415.
+    },
+    {
+      xmin: 10.9
+      ymin: -185
+      zmin: 15.
+      xmax: 190.9
+      ymax: 185
+      zmax: 415.
+    }
+]
+
+SBND_active_volumes: [
+    {
+      xmin: -199.15
+      ymin: -200.
+      zmin: 0.0
+      xmax: 199.15
+      ymax: 200.
+      zmax: 500.
+    }
+]
+
+#fiducial volume of SBND used in proposal
+SBND_Proposal_fiducial_volumes: [
+     {
+      xmin: -175
+      ymin: -175
+      zmin: 30.
+      xmax: -1.5
+      ymax: 175
+      zmax: 450.
+     },
+     {
+      xmin: 1.5
+      ymin: -175
+      zmin: 30.
+      xmax: 175
+      ymax: 175
+      zmax: 450.
+     }
+
+]
+
+#active volume of SBND used in proposal
+SBND_Proposal_active_volumes: [
+     {
+      xmin: -200
+      ymin: -200.
+      zmin: 0.0
+      xmax: 200
+      ymax: 200.
+      zmax: 500.
+     }
+]
+
+MicroBooNE_fiducial_volumes: [
+    {
+      xmin: 23.45
+      ymin: -90.53
+      zmin: 30.1
+      xmax: 229.8
+      ymax: 92.47
+      zmax: 986.9
+    }
+]
+
+MicroBooNE_active_volumes: [
+    {
+      xmin: -1.55
+      ymin: -115.53
+      zmin: 0.1
+      xmax: 254.8
+      ymax: 117.47
+      zmax: 1036.9
+    }
+]
+
+ICARUS_fiducial_volumes: [
+     {
+       xmin: -339.49
+       ymin: -148.41
+       zmin: -879.950652
+       xmax: -221.04
+       ymax: 118.41
+       zmax: 829.950652
+     },
+     {
+       xmin: -218.89
+       ymin: -148.41
+       zmin: -879.950652
+       xmax: -92.94
+       ymax: 118.41
+       zmax: 829.950652
+     },
+     {
+       xmin: 92.94
+       ymin: -148.41
+       zmin: -879.950652
+       xmax: 211.39
+       ymax: 118.41
+       zmax: 829.950652
+     },
+     {
+       xmin: 214.39
+       ymin: -148.41
+       zmin: -879.950652
+       xmax: 339.49
+       ymax: 118.41
+       zmax: 829.950652
+     }
+]
+
+ICARUS_active_volumes: [
+    {
+      xmin: -364.49
+      ymin: -173.41
+      zmin: -909.950652
+      xmax: -67.94
+      ymax: 143.41
+      zmax: 879.950652
+    },
+    {
+      xmin: 67.94
+      ymin: -173.41
+      zmin: -909.950652
+      xmax: 364.49
+      ymax: 143.41
+      zmax: 879.950652
+    }
+]
+
+reco_selection: {
+
+      minLengthExitingTrack:           46     
+      trackVisibleEnergyThreshold:     0.09
+      showerVisibleEnergyThreshold:    140
+      showerEnergyDistortion:          0.157
+      trackEnergyDistortion:           0.13
+      leptonEnergyDistortionContained: 0.15
+      nueEfficency:                    0.8                 
+      vtxEnergyCut:                    0.239
+      photonConvLenghCut:              2.1
+      dEdxPhotonCut:                   0.24                 
+      GlobalWeight:                    1
+      POTWeight:                       1 #weighting done outside. 
+      photonVisibleEnergyThreshold:    225
+      CosmicWeight:                    0.05
+      CosmicGlobalWeight:              1
+      CosmicVolumeRadius:              15 #cm
+      ElectronWeight: 0.326395
+      PhotonWeight: 1.20
+
+      GlobalTimeOffset:  0    #Offset In the spill time in the simulation (in ns) 
+      SpillTime:         1600 #Time a spill last for in ns.
+      ReadOutWindowSize: 1 
+ 
+      ApplyNueEfficiency:          true    
+      ApplyElectronEnergyCut:      true
+      ApplyFVCut:                  true 
+      ApplyAVCut:                  true
+      ApplyPhotonEnergyCut:        true
+      ApplyConversionGapCut:       true
+      ApplydEdxCut:                true
+      ApplyMuonLenghtCut:          true 
+      ApplyCosmicInSpillWindowCut: true
+      ApplyKMECCut:                false
+      ApplyGENIEVersionWeight:     false
+      ApplyCosmicCylinderCut:      true
+      ApplyCosmicFVCut:            true
+
+
+      IncludeCosmics:        true 
+      IncludeDirt:           true
+      CosmicsOnly:           false
+      DirtOnly:              false
+
+      IntrinsicOnly: false
+      NuMuOnly:      false 
+      OscOnly:       false   
+      
+      DontUseSimChannels:    false
+      Verbose:               false 
+
+      FillHistograms: false
+      FillModeHistograms: false
+      FillIntTypeHistograms: false
+      UseGenieHists: false
+}
+
+
+actual_reco_selection: {
+
+GlobalWeight: 1
+    POTWeight: 1
+    ElectronWeight: 1
+    PhotonWeight: 1
+    GlobalTimeOffset: 0
+    SpillTime: 1600
+    ReadoutWindowSize: 3000
+    NSegments: 10
+    TrackEnergyCorrection: 1.1641
+    ShowerEnergyCorrection: 1.145
+    NutrinoEnergyCorrection: 1.1949
+    EnergyConversion: [0.00155644,0.00173915,0.00153631]
+
+    SetupMVA: false
+    Weightfile: ""
+    MVAMethod: ""
+    MVAValuesNames: ["dEdxMVA",
+                     "CoversionGapMVA",
+                     "MaxTrackLenghMVA",
+                     "MaxTrackPIDAMVA",
+                     "ShowerEnergyMVA",
+                     "ShowerLengthEMVA",
+                     "ShowerDensityOpeningAngleMVA",
+                     "NumberOfNeutrinosMVA",
+                     "ShowerResidualNumShowersMVA",
+                     "ShowerDensityPWMVA",
+                    "ShowerDensityGradNewMVA",
+                     "NuetrinoPdGMVA",
+                     "ShowerTrackWidthMVA",
+                     "ShowerTrackLengthMVA"]
+
+    GeneratorTag: "generator"
+    PandoraTag: "pandoraUboonetune"
+    HitTag: "linecluster"
+    ShowerTag: "tracsUboonetuneRetune"
+    FluxTag: "generator" 
+    TrackTag: "pandoraTrackUboonetune"
+    TrackPIDTag: "TrackRedoPidUboonetune"
+    CalorimetryTag: "TrackRedoCaloUboonetune"
+
+    ApplyFVCut: true
+    ApplyOneShowerEnergyCut: true
+    ApplyShowerResidualCut: false
+    ApplyConversionGapCut:  true
+    ApplydEdxCut: true 
+    ApplyLengthCut: false
+    ApplyOpeningAngleCut: false
+    ApplyShowerEnergyCut: false
+    ApplyShowerDensityGradientCut: false
+
+    ApplyShowerTrackLengthCut: false
+    ApplyShowerTrackWidthCut: false 
+    ApplyMaxTrackLengthCut: false 
+    ApplyMaxTrackPIDACut: false 
+    ApplyMaxTrackLengthPIDACu: false 
+    ApplyMVACut: false 
+    ApplyNeutrinoPdgCodeCut: false 
+    ApplyNumneutrinosCut: false 
+
+    SecondaryShowerEnergyCut: 0
+    ShowerResidualEnergyCut: 10
+    ResiudalCut: 0.025
+    NumShowersCut: 1
+    dEdxCut: 2.5
+    ConversionGapCut: 2.1
+    LengthCut: -1
+    OpeningAngleCut: -1
+    ShowerEnergyCut: 225
+    ShowerDensityGradientCut: -1
+    ShowerDensityPowerCut: -1 
+    ShowerTrackLengthCut: 40 
+    ShowerTrackWidthCut: -1
+    MaxTrackLengthCut: -1
+    MaxTrackPIDACut: -1
+    MaxTrackLengthPIDACut: -1
+    MVACut: -1
+    NeutrinoPdgCodeCut: 11
+    NumneutrinosCut: 1
+    XOffset: 0
+
+    IntrinsicOnly: false
+    NuMuOnly:      false 
+    OscOnly:       false   
+    
+    Verbose:               false 
+
+    FillHistograms: false
+    FillModeHistograms: false
+    FillIntTypeHistograms: false
+    UseGenieHists: false
+}
+
+
+
+standard_selection: {
+
+      minLengthExitingTrack:           100     
+      trackVisibleEnergyThreshold:     0.021
+      showerVisibleEnergyThreshold:    200
+      showerEnergyDistortion:          0.15            
+      trackEnergyDistortion:           0.05
+      leptonEnergyDistortionContained: 0.15
+      nueEfficency:                    0.8                 
+      vtxEnergyCut:                    50
+      photonConvLenghCut:              3
+      dEdxPhotonCut:                   0.06                 
+      GlobalWeight:                    1
+      POTWeight:                       1 #weighting done outside. 
+      photonVisibleEnergyThreshold:    100
+      CosmicWeight:                    0.05
+      CosmicGlobalWeight:              1
+      CosmicVolumeRadius:              15 #cm
+      ElectronWeight: 1 
+      PhotonWeight: 1
+
+      GlobalTimeOffset:  0    #Offset In the spill time in the simulation (in ns) 
+      SpillTime:         1600 #Time a spill last for in ns.
+      ReadOutWindowSize: 1 
+ 
+      ApplyNueEfficiency:          true    
+      ApplyElectronEnergyCut:      true
+      ApplyFVCut:                  true 
+      ApplyAVCut:                  true
+      ApplyPhotonEnergyCut:        true
+      ApplyConversionGapCut:       true
+      ApplydEdxCut:                true
+      ApplyMuonLenghtCut:          true 
+      ApplyCosmicInSpillWindowCut: true
+      ApplyKMECCut:                false
+      ApplyGENIEVersionWeight:     false
+      ApplyCosmicCylinderCut:      true
+      ApplyCosmicFVCut:            true
+
+
+      IncludeCosmics:        true 
+      IncludeDirt:           true
+      CosmicsOnly:           false
+      DirtOnly:              false
+
+      IntrinsicOnly: false
+      NuMuOnly:      false 
+      OscOnly:       false   
+      
+      DontUseSimChannels:    false
+      Verbose:               false 
+
+      FillHistograms: false
+      FillModeHistograms: false
+      FillIntTypeHistograms: false
+      UseGenieHists: false
+}
+
+
+
+standard_UniformWeights: ["bnbcorrection_FluxHist"]
+
+END_PROLOG
 

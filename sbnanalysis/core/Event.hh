@@ -195,6 +195,9 @@ public:
   float reco_energy;  //!< Reconstructed neutrino energy [GeV]
   float weight;  //!< Selection-defined event weight
   size_t index;  //!< Index in the reco vector
+
+  bool wasCosmic;
+  bool wasDirt;
 };
 
 
